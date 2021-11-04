@@ -138,7 +138,8 @@
 					
 					</table>
 					</div>';
-					$pres                   = $row->nama_manometer;
+					// $pres                   = $row->nama_manometer;
+					$pres                   = $row->tekanan;
 					$datap               = json_decode($pres, true);
 					
 					$latlng                 = $row->latlng;

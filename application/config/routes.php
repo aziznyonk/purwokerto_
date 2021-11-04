@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -58,41 +58,42 @@ $route['default_controller']    = 'login';
 $route['404_override']          = 'error_404';
 $route['translate_uri_dashes']  = TRUE;
 
-$route['loginMe']               ='login/loginMe';
+$route['loginMe']               = 'login/loginMe';
 
-$route['dashboard']             ='dashboard';
+$route['dashboard']             = 'dashboard';
 
-$route['user']                  ='user';
-$route['addUser']               ='userAdd';
-$route['insertOneUser']         ='userAdd/insertOneUser';
-$route['add50User']             ='userAdd/add50User';
+$route['user']                  = 'user';
+$route['addUser']               = 'userAdd';
+$route['insertOneUser']         = 'userAdd/insertOneUser';
+$route['add50User']             = 'userAdd/add50User';
 
-$route['logout']                ='user/logout';
+$route['logout']                = 'user/logout';
 
 $route['mbr']                   = 'sr_mbr';
+$route['mbr/getDataPelMbr']     = 'sr_mbr/getDataPelMbr';
 $route['addMbr']                = 'sr_mbrAdd';
 $route['insertOneMbr']          = 'sr_mbrAdd/insertOneMbr';
-$route['delete_mbr']          	= 'sr_mbr/delete_mbr';
+$route['delete_mbr']              = 'sr_mbr/delete_mbr';
 
 $route['admin']                 = 'admin';
 $route['addAdmin']              = 'addAdmin';
 $route['insertOneAdmin']        = 'addAdmin/insertOneAdmin';
 
-$route['pela']             		= 'pela';
-$route['delete_pelanggan'] 		= 'pela/delete_pelanggan';
+$route['pela']                     = 'pela';
+$route['delete_pelanggan']         = 'pela/delete_pelanggan';
 
-$route['news']					= 'news';
+$route['news']                    = 'news';
 
-$route['pipa']					= 'pipa';
-$route['pipaRencana']			= 'pipa/pipaRencana';
-$route['pipaRencanaAdd']		= 'pipa/pipaRencanaAdd';
-$route['pipaRencanaCreate']		= 'pipa/pipaRencanaCreate';
+$route['pipa']                    = 'pipa';
+$route['pipaRencana']            = 'pipa/pipaRencana';
+$route['pipaRencanaAdd']        = 'pipa/pipaRencanaAdd';
+$route['pipaRencanaCreate']        = 'pipa/pipaRencanaCreate';
 
-$route['exportKml_pela']		= 'kml_pwt/export_pela';
-$route['exportKml_mbr']			= 'kml_pwt/export_mbr';
-$route['exportKml_pipa']		= 'kml_pwt/export_pipa';
+$route['exportKml_pela']        = 'kml_pwt/export_pela';
+$route['exportKml_mbr']            = 'kml_pwt/export_mbr';
+$route['exportKml_pipa']        = 'kml_pwt/export_pipa';
 
-$route['tekanan']				= 'manometer';
+$route['tekanan']                = 'manometer';
 
 /*ini route bagian WEB GIS*/
 $route['maps']                  = 'map';
@@ -104,18 +105,18 @@ $route['mapsSearchPelanggan']   = 'map/mapSearchPelanggan';
 $route['mapsMbr']               = 'map/mapMbr';
 $route['mapsPipaRencana']       = 'map/mapPipaRencana';
 $route['mapsPipa']              = 'map/mapPipa';
-$route['mapsDop']				= 'map/mapDop';
-$route['mapsFhydrant']       	= 'map/mapFhydrant';
+$route['mapsDop']                = 'map/mapDop';
+$route['mapsFhydrant']           = 'map/mapFhydrant';
 $route['mapsGiboult']           = 'map/mapGiboult';
-$route['mapsJembatan']			= 'map/mapJembatan';
-$route['mapsKnie']				= 'map/mapKnie';
-$route['mapsPompa']           	= 'map/mapPompa';
-$route['mapsTee']				= 'map/mapTee';
+$route['mapsJembatan']            = 'map/mapJembatan';
+$route['mapsKnie']                = 'map/mapKnie';
+$route['mapsPompa']               = 'map/mapPompa';
+$route['mapsTee']                = 'map/mapTee';
 
 /*ini route bagian WEB GIS TEKANAN DAN DEBIT*/
-$route['mapsTekanan']         	= 'map/mapTekanan';
+$route['mapsTekanan']             = 'map/mapTekanan';
 //$route['mapsTekanan']			= 'mapTekanan';
-$route['mapsPipaTekanans']		= 'mapTekanan/mapTekanans';
+$route['mapsPipaTekanans']        = 'mapTekanan/mapTekanans';
 $route['mapsTekananCek']        = 'mapTekanan/mapsTekananCek';
 $route['mapsManometerCek']      = 'mapTekanan/mapsManometer';
 $route['mapsMeterCek']          = 'mapTekanan/mapsMeter';
@@ -124,28 +125,28 @@ $route['mapsMeterCek']          = 'mapTekanan/mapsMeter';
 | Sample REST API Routes
 | -------------------------------------------------------------------------
 */
-$route['api/loginMe']           		='API/LoginMe';
-$route['api/insertSr_Mbr']      		='API/insertSr_Mbr';
-$route['api/getAllSr_mbr']      		='API/getAllSr_mbr';
-$route['api/getCountAllSr_mbrByUser']   ='API/getCountAllSr_mbrByUser';
-$route['api/getCountAllSr_mbr']      	='API/getCountAllSr_mbr';
-$route['api/searchSr_mbr']      		='API/searchSr_mbr';
-$route['api/insertPipaDetails'] 		='API/insertPipaDetails';
-$route['api/getAllPipa']        		='API/getAllPipa';
-$route['api/insertK_Pelanggan'] 		='API/insertKoorPelanggan';
-$route['api/searchPelanggan']      		='API/searchPelanggan';
-$route['api/getHotNews']				='API/getHotNews';
-$route['api/getTekananMano']			='API/getTekananMano';
-$route['api/getDebitMeter']				='API/getDebitMeter';
-$route['api/insertAssets']				='API/insertAssets';
+$route['api/loginMe']                   = 'API/LoginMe';
+$route['api/insertSr_Mbr']              = 'API/insertSr_Mbr';
+$route['api/getAllSr_mbr']              = 'API/getAllSr_mbr';
+$route['api/getCountAllSr_mbrByUser']   = 'API/getCountAllSr_mbrByUser';
+$route['api/getCountAllSr_mbr']          = 'API/getCountAllSr_mbr';
+$route['api/searchSr_mbr']              = 'API/searchSr_mbr';
+$route['api/insertPipaDetails']         = 'API/insertPipaDetails';
+$route['api/getAllPipa']                = 'API/getAllPipa';
+$route['api/insertK_Pelanggan']         = 'API/insertKoorPelanggan';
+$route['api/searchPelanggan']              = 'API/searchPelanggan';
+$route['api/getHotNews']                = 'API/getHotNews';
+$route['api/getTekananMano']            = 'API/getTekananMano';
+$route['api/getDebitMeter']                = 'API/getDebitMeter';
+$route['api/insertAssets']                = 'API/insertAssets';
 
-$route['api/insertPengawas'] 			='API/insertPengawas';
-$route['api/searchPengawas']      		='API/searchPengawas';
+$route['api/insertPengawas']             = 'API/insertPengawas';
+$route['api/searchPengawas']              = 'API/searchPengawas';
 
-$route['api/getALLManometer']      		='API/getALLManometer';
-$route['api/searchManometer']      		='API/searchManometer';
-$route['api/insertTekananManometer']    ='API/insertTekananManometer';
-$route['api/searchMeterinduk']      	='API/searchMeterinduk';
-$route['api/insertDebitMeterinduk']    	='API/insertDebitMeterinduk';
-$route['api/insertDebitTekanan']    	='API/insertDebitTekanan';
-$route['api/insertManometer'] 			='API/insertManometer';
+$route['api/getALLManometer']              = 'API/getALLManometer';
+$route['api/searchManometer']              = 'API/searchManometer';
+$route['api/insertTekananManometer']    = 'API/insertTekananManometer';
+$route['api/searchMeterinduk']          = 'API/searchMeterinduk';
+$route['api/insertDebitMeterinduk']        = 'API/insertDebitMeterinduk';
+$route['api/insertDebitTekanan']        = 'API/insertDebitTekanan';
+$route['api/insertManometer']             = 'API/insertManometer';

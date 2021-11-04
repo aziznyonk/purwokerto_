@@ -9,6 +9,7 @@ class Login extends CI_Controller {
     }
 
 	public function index(){
+        print_r(md5('enter'));
         $this->isLoggedIn();
 	}
 
