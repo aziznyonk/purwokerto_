@@ -1,7 +1,7 @@
 <?php
-	defined('BASEPATH') OR exit('No direct script access allowed');
-	
-	/*
+defined('BASEPATH') or exit('No direct script access allowed');
+
+/*
 		| -------------------------------------------------------------------
 		| DATABASE CONNECTIVITY SETTINGS
 		| -------------------------------------------------------------------
@@ -70,101 +70,103 @@
 		| The $query_builder variables lets you determine whether or not to load
 		| the query builder class.
 	*/
-	// $active_group = 'default';
-	// $query_builder = TRUE;
-	
-	// $db['default'] = array(
-	// 	'dsn'	=> '',
-	// 	'hostname' => 'localhost:3309',
-	// 	'username' => 'gis',
-	// 	'password' => 'password',
-	// 	'database' => 'pdam_pwt',
-	// 	'dbdriver' => 'mysqli',
-	// 	'dbprefix' => '',
-	// 	'pconnect' => FALSE,
-	// 	'db_debug' => (ENVIRONMENT !== 'production'),
-	// 	'cache_on' => FALSE,
-	// 	'cachedir' => '',
-	// 	'char_set' => 'utf8',
-	// 	'dbcollat' => 'utf8_general_ci',
-	// 	'swap_pre' => '',
-	// 	'encrypt' => FALSE,
-	// 	'compress' => FALSE,
-	// 	'stricton' => FALSE,
-	// 	'failover' => array(),
-	// 	'save_queries' => TRUE
-	
-	// );
-	
-	$active_group = 'bill';
-	$query_builder = TRUE;
-	$db['bill'] = array(
-    'dsn'          => '',
-    'hostname'     => '192.168.1.212:3306',
-    'username'     => 'root',
-    'password'     => 'purwo',
-    'database'     => 'billing',
-    'dbdriver'     => 'mysqli',
-    'dbprefix'     => '',
-    'pconnect'     => FALSE,
-    'db_debug'     => (ENVIRONMENT !== 'production'),
-    'cache_on'     => FALSE,
-    'cachedir'     => '',
-    'char_set'     => 'utf8',
-    'dbcollat'     => 'utf8_general_ci',
-    'swap_pre'     => '',
-    'encrypt'      => FALSE,
-    'compress'     => FALSE,
-    'stricton'     => FALSE,
-    'failover'     => array(),
-    'save_queries' => FALSE
-	);
-	
-	$active_group = 'eo';
-	$query_builder = TRUE;
-	$db['eo'] = array(
-    'dsn'          => '',
-    'hostname'     => '192.168.1.183:3306',
-    'username'     => 'root',
-    'password'     => 'purwo',
-    'database'     => 'smartoffice',
-    'dbdriver'     => 'mysqli',
-    'dbprefix'     => '',
-    'pconnect'     => FALSE,
-    'db_debug'     => (ENVIRONMENT !== 'production'),
-    'cache_on'     => FALSE,
-    'cachedir'     => '',
-    'char_set'     => 'utf8',
-    'dbcollat'     => 'utf8_general_ci',
-    'swap_pre'     => '',
-    'encrypt'      => FALSE,
-    'compress'     => FALSE,
-    'stricton'     => FALSE,
-    'failover'     => array(),
-    'save_queries' => FALSE
-	);
-	
-	$active_group = 'default';
-	$query_builder = TRUE;
-	$db['default'] = array(
-    'dsn'	   => '',
-	'hostname' => '192.168.1.108:3309',
-    'username' => 'gis',
-    'password' => 'app@gis',
-    'database' => 'pdam_pwt',
-    'dbdriver' => 'mysqli',
-    'dbprefix' => '',
-    'pconnect' => FALSE,
-    'db_debug' => (ENVIRONMENT !== 'production'),
-    'cache_on' => FALSE,
-    'cachedir' => '',
-    'char_set' => 'utf8',
-    'dbcollat' => 'utf8_general_ci',
-    'swap_pre' => '',
-    'encrypt'  => FALSE,
-    'compress' => FALSE,
-    'stricton' => FALSE,
-    'failover' => array(),
-    'save_queries' => TRUE
-	);
-	
+// $active_group = 'default';
+// $query_builder = TRUE;
+
+// $db['default'] = array(
+// 	'dsn'	=> '',
+// 	'hostname' => 'localhost:3309',
+// 	'username' => 'gis',
+// 	'password' => 'password',
+// 	'database' => 'pdam_pwt',
+// 	'dbdriver' => 'mysqli',
+// 	'dbprefix' => '',
+// 	'pconnect' => FALSE,
+// 	'db_debug' => (ENVIRONMENT !== 'production'),
+// 	'cache_on' => FALSE,
+// 	'cachedir' => '',
+// 	'char_set' => 'utf8',
+// 	'dbcollat' => 'utf8_general_ci',
+// 	'swap_pre' => '',
+// 	'encrypt' => FALSE,
+// 	'compress' => FALSE,
+// 	'stricton' => FALSE,
+// 	'failover' => array(),
+// 	'save_queries' => TRUE
+
+// );
+
+$active_group = 'bill';
+$query_builder = TRUE;
+$db['bill'] = array(
+	'dsn'          => '',
+	// 'hostname'     => '192.168.1.212:3306',
+	'hostname'     => 'localhost',
+	'username'     => 'root',
+	'password'     => 'purwo',
+	'database'     => 'billing',
+	'dbdriver'     => 'mysqli',
+	'dbprefix'     => '',
+	'pconnect'     => FALSE,
+	'db_debug'     => (ENVIRONMENT !== 'production'),
+	'cache_on'     => FALSE,
+	'cachedir'     => '',
+	'char_set'     => 'utf8',
+	'dbcollat'     => 'utf8_general_ci',
+	'swap_pre'     => '',
+	'encrypt'      => FALSE,
+	'compress'     => FALSE,
+	'stricton'     => FALSE,
+	'failover'     => array(),
+	'save_queries' => FALSE
+);
+
+$active_group = 'eo';
+$query_builder = TRUE;
+$db['eo'] = array(
+	'dsn'          => '',
+	// 'hostname'     => '192.168.1.183:3306',
+	'hostname'     => 'localhost',
+	'username'     => 'root',
+	'password'     => 'purwo',
+	'database'     => 'smartoffice',
+	'dbdriver'     => 'mysqli',
+	'dbprefix'     => '',
+	'pconnect'     => FALSE,
+	'db_debug'     => (ENVIRONMENT !== 'production'),
+	'cache_on'     => FALSE,
+	'cachedir'     => '',
+	'char_set'     => 'utf8',
+	'dbcollat'     => 'utf8_general_ci',
+	'swap_pre'     => '',
+	'encrypt'      => FALSE,
+	'compress'     => FALSE,
+	'stricton'     => FALSE,
+	'failover'     => array(),
+	'save_queries' => FALSE
+);
+
+$active_group = 'default';
+$query_builder = TRUE;
+$db['default'] = array(
+	'dsn'	   => '',
+	// 'hostname' => '192.168.1.108:3309',
+	'hostname' => 'localhost',
+	'username' => 'gis',
+	'password' => 'app@gis',
+	'database' => 'pdam_pwt',
+	'dbdriver' => 'mysqli',
+	'dbprefix' => '',
+	'pconnect' => FALSE,
+	'db_debug' => (ENVIRONMENT !== 'production'),
+	'cache_on' => FALSE,
+	'cachedir' => '',
+	'char_set' => 'utf8',
+	'dbcollat' => 'utf8_general_ci',
+	'swap_pre' => '',
+	'encrypt'  => FALSE,
+	'compress' => FALSE,
+	'stricton' => FALSE,
+	'failover' => array(),
+	'save_queries' => TRUE
+);
