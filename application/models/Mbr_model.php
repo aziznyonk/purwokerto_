@@ -7,7 +7,7 @@ class Mbr_model extends CI_Model
 	{
 		$result = (object)[];
 		if ($penginput != null) $r = $this->mbrPenginput($offset, $rows, $penginput);
-		elseif ($nama != null) $r = $this->mbrNama($nama);
+		elseif ($nama != null) $r = $this->mbrNama($offset, $rows, $nama);
 		elseif ($surv != null) $r = $this->mbrSurv($offset, $rows, $surv);
 		else $r = $this->mbrDefault($offset, $rows);
 		$result->rows = [];
@@ -117,14 +117,15 @@ class Mbr_model extends CI_Model
 		return $data;
 	}
 
-	function mbrNama($nama)
+	function mbrNama($offset, $rows, $nama)
 	{
 		$data['data'] = $this->db
 			->from('sr_mbr')
 			->like('nama', $nama)
+			->limit($offset, $rows)
 			->get()
 			->result();
-		$data['tot'] = count($data['data']);
+		$data['tot'] = $this->db->select('COUNT(ID) AS total')->like('nama', $nama)->get('sr_mbr')->result()[0]->total;
 		return $data;
 	}
 
