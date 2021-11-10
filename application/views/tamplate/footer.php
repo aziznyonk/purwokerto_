@@ -6,7 +6,7 @@
             reserved.
         </footer>
         </div>
-        <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/jquery/jquery.min.js"></script>
+        
         <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/jquery/jquery.dataTables.js"></script>
         <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
         <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap/js/dataTables.bootstrap.js"></script>
@@ -16,8 +16,8 @@
         <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/javascripts/adminLTE.js"></script>
         <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/javascripts/vanillaJS.js"></script>
 
-        <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.min.js"></script>
-        <script type="text/javascript" src="https://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/easyui/jquery.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/easyui/jquery.easyui.min.js"></script>
         </body>
 
         </html>

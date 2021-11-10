@@ -19,8 +19,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
 	<!-- bootstrap wysihtml5 - text editor -->
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap-datepicker.min.css">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap3-wysihtml5.min.css">
-	<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/default/easyui.css">
-	<link rel="stylesheet" type="text/css" href="https://www.jeasyui.com/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/easyui/themes/icon.css?<?= strtotime(date('Ymd his')) ?>">
+	<script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/jquery/jquery.min.js"></script>
 </head>
 
 <body class="hold-transition skin-blue sidebar-mini">
@@ -97,6 +98,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 					<li class="bttn">
 						<a href="<?php echo base_url(); ?>tekanan">
 							<i class="fa fa-file"></i><span>Data Tekanan</span>
+						</a>
+					</li>
+					<li class="bttn">
+						<a href="<?php echo base_url(); ?>master_tekanan">
+							<i class="fa fa-file"></i><span>Master Tekanan</span>
 						</a>
 					</li>
 
