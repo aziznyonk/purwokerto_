@@ -169,7 +169,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     let doSearch = (req) => {
         console.log(req)
         $('#tt').datagrid('load', req)
-        $('#tb')[0].reset()
+        $('.easyui-searchbox').textbox('reset')
     }
 
     let resetTable = () => {
@@ -177,6 +177,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             page: 1,
             rows: 10
         })
+        $('.easyui-searchbox').textbox('reset')
     }
 
     function deleteFunction(ID) {

@@ -4,10 +4,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <div class="content-wrapper">
     <section class="content-header">
-        <div class="input-group">
+        <!-- <div class="input-group">
             <a href="<?php echo base_url(); ?>index.php/Sr_mbrAdd"><button class="btn btn-default"><i class="fa fa-plus"></i> Add New Pelanggan</button></a>
             <a href="<?php echo base_url(); ?>index.php/exportKml_pela" target="blank" download="Marker_Pelanggan.geojson" style="margin-left:10px"><button class="btn btn-info"><i class="fa fa-save"></i> Save Pelanggan KML</button></a>
-        </div>
+        </div> -->
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Pelanggan</li>
@@ -116,7 +116,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     })
     let doSearch = (req) => {
         $('#tt').datagrid('load', req)
-        $('#tb input[type=text]').val('')
+        $('.easyui-searchbox').textbox('reset')
     }
 
     let resetTable = () => {
@@ -124,6 +124,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             page: 1,
             rows: 10
         })
+        $('.easyui-searchbox').textbox('reset')
     }
 
     function deleteFunction(ID) {
