@@ -14,14 +14,44 @@ class Tekanan_model extends CI_Model
 		$result->rows = [];
 		foreach ($r as $d) {
 			$koordinat = json_decode($d->latlng)[0]->geometry;
-			$d->koordinat = '<a href="#" onClick="openModal(' . $koordinat[0] . ',' . $koordinat[1] . ')" data-toggle="modal" data-target="#myModal">' . $koordinat[0] . ',' . $koordinat[1] . '</a>';
-			$d->action = '<a href=' . base_url() . 'pipa/details_pipa/' . $d->ID . '" class="btn btn-small"><i class="icon fa fa-eye" title="Details"></i></a>'
-				. '<a href="' . base_url() . 'pipa/edit_pipa/' . $d->ID . '" class="btn btn-small"><i class="icon fa fa-pencil" title="edit"></i></a>'
-				. '<a onclick="deleteFunction(' . $d->ID . ')" class="btn btn-small text-danger"><i class="icon fa fa-trash" title="delete"></i></a>';
+			$d->koordinat = '<a href="#" onClick="openModal(' . $koordinat[0] . ',' . $koordinat[1] . ',' . $d->tekanan . ')" data-toggle="modal" data-target="#myModal">' . $koordinat[0] . ',' . $koordinat[1] . '</a>';
+			// $d->foto = '<img class="zoom" src="' . $d->path . '" style="width:50px;height:50px;">';
+			// $a_edit = '<a href="' . base_url() . 'pipa/edit_pipa/' . $d->ID . '" class="btn btn-small"><i class="icon fa fa-pencil" title="edit"></i></a>';
+			$a_edit = '<a href="#" onClick="edit(' . $d->ID . ')" data-toggle="modal" data-target="#editModal"><i class="icon fa fa-pencil" title="edit"></i></a>';
+			$a_delete = '<a onclick="hapus(' . $d->ID . ')" class="btn btn-small text-danger"><i class="icon fa fa-trash" title="delete"></i></a>';
+			$d->action = $a_edit . $a_delete;
 			array_push($result->rows, $d);
 		}
 		$result->total = $this->db->count_all('pelanggan_pwt');
 		return $result;
+	}
+
+	function tekananDetail($ID)
+	{
+		$result = $this->db->get_where('manometer', ['ID' => $ID])->row();
+		return $result;
+	}
+
+	function update($data, $where)
+	{
+		$this->db->trans_start();
+		$this->db->update('manometer', $data, $where);
+		$this->db->trans_complete();
+		if ($this->db->trans_status() === true) {
+			return ["code" => 201, "message" => "Data berhasil di Update"];
+		}
+		return ["code" => 204, "message" => "Data GAGAL di Update"];
+	}
+
+	function delete($ID)
+	{
+		$this->db->trans_start();
+		$this->db->delete('manometer', ['ID' => $ID]);
+		$this->db->trans_complete();
+		if ($this->db->trans_status() === true) {
+			return ["code" => 201, "message" => "Data berhasil dihapus"];
+		}
+		return ["code" => 204, "message" => "Gagal menghapus Data!"];
 	}
 
 	function pipaRencanaListing()

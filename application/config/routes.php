@@ -87,6 +87,7 @@ $route['delete_pelanggan']          = 'pela/delete_pelanggan';
 $route['news']                      = 'news';
 
 $route['pipa']                      = 'pipa';
+$route['pipa/details_pipa/(:num)']  = 'pipa/details_pipa/$1';
 $route['pipaRencana']               = 'pipa/pipaRencana';
 $route['pipaRencanaAdd']            = 'pipa/pipaRencanaAdd';
 $route['pipaRencanaCreate']         = 'pipa/pipaRencanaCreate';
@@ -95,10 +96,14 @@ $route['exportKml_pela']            = 'kml_pwt/export_pela';
 $route['exportKml_mbr']             = 'kml_pwt/export_mbr';
 $route['exportKml_pipa']            = 'kml_pwt/export_pipa';
 
-$route['tekanan']                   = 'manometer';
-$route['tekanan/getDataTekanan']    = 'manometer/getDataTekanan';
-$route['tekanan/getMap/(:any)/(:any)']    = 'manometer/getMap/$1/$2';
-$route['master_tekanan']                   = 'MasterTekanan';
+$route['tekanan']                           = 'manometer';
+$route['tekanan/getDetailTekanan/(:num)']   = 'manometer/getDetailTekanan/$1';
+$route['tekanan/update/(:num)']             = 'manometer/update/$1';
+$route['tekanan/delete/(:num)']             = 'manometer/delete/$1';
+$route['tekanan/getDataTekanan']            = 'manometer/getDataTekanan';
+$route['tekanan/details_pipa/(:num)']       = 'manometer/details_pipa/$1';
+$route['tekanan/getMap/(:any)/(:any)']      = 'manometer/getMap/$1/$2';
+$route['master_tekanan']                    = 'MasterTekanan';
 
 /*ini route bagian WEB GIS*/
 $route['maps']                      = 'map';

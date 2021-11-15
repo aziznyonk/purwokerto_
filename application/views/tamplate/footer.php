@@ -6,7 +6,7 @@
             reserved.
         </footer>
         </div>
-        
+
         <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/jquery/jquery.dataTables.js"></script>
         <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap/js/bootstrap.min.js"></script>
         <script rel="script" type="text/javascript" src="<?php echo base_url(); ?>assets/bootstrap/js/dataTables.bootstrap.js"></script>
@@ -18,6 +18,10 @@
 
         <script type="text/javascript" src="<?php echo base_url(); ?>assets/easyui/jquery.min.js"></script>
         <script type="text/javascript" src="<?php echo base_url(); ?>assets/easyui/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/easyui/jquery.easyui.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url(); ?>assets/easyui/datagrid-detailview.js"></script>
+        <?= (isset($cusScript)) ? $cusScript : "" ?>
+        <?= (isset($mapScript)) ? $mapScript : "" ?>
         </body>
 
         </html>

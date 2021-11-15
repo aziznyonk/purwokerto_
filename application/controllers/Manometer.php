@@ -6,9 +6,9 @@ class Manometer extends BaseController
 {
 	function __construct()
 	{
-		
 		parent::__construct();
 		$this->load->model('tekanan_model');
+		$this->load->model('Pipa_model');
 		$this->isLoggedIn();
 	}
 
@@ -18,7 +18,9 @@ class Manometer extends BaseController
 			$this->loadThis();
 		} else {
 			$this->global['title'] = 'Manometer';
-			$this->loadViews('manometer/tekanan', $this->global, [], null);
+			$this->global['cusScript'] = '<script src="' . base_url() . 'assets/custom/js/tekanan.js"></script>';
+			$this->global['mapScript'] = '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhp3-zMM6Z1-NM8FBefecBjnRQBIv08_8&callback=initMap&v=weekly" async></script>';
+			$this->loadViews('manometer/tekanan', $this->global, null);
 		}
 	}
 
@@ -29,7 +31,41 @@ class Manometer extends BaseController
 		$offset = ($page - 1) * $rows;
 
 		$this->global['title'] = 'Tekanan';
-		echo json_encode($this->tekanan_model->tekananListing($rows, $offset));
+		$result = $this->tekanan_model->tekananListing($rows, $offset);
+		echo json_encode($result);
+	}
+
+	public function getDetailTekanan($ID)
+	{
+		$res = $this->tekanan_model->tekananDetail($ID);
+		echo json_encode($res);
+	}
+
+	public function update($ID)
+	{
+		$data = [
+			"id_manometer" => $_POST["id_manometer"],
+			"nama_manometer" => $_POST["nama_manometer"],
+			"lokasi" => $_POST["lokasi"],
+			"latlng" => $_POST["latlng"],
+			"kondisi" => $_POST["kondisi"],
+			"tekanan" => $_POST["tekanan"],
+			"keterangan" => $_POST["keterangan"]
+		];
+
+		$where = [
+			"ID" => $ID,
+		];
+
+		$res = $this->tekanan_model->update($data, $where);
+
+		echo json_encode($res);
+	}
+
+	public function delete($ID)
+	{
+		$res = $this->tekanan_model->delete($ID);
+		echo json_encode($res);
 	}
 
 	public function pipaRencana()
@@ -42,17 +78,10 @@ class Manometer extends BaseController
 			$this->loadViews('pipa/pipaRencana', $this->global, $data, null);
 		}
 	}
-	public function details_pipa()
+	public function details_pipa($id)
 	{
-		$id = $this->uri->segment(3);
-		if ($this->isAdmin() == TRUE) {
-			$this->loadThis();
-		} else {
-			$this->global['title'] 	= 'Pipa';
-			$data['pipa']			= 'Pipa';
-			$data['pipaRecords'] 	= $this->tekanan_model->pipaListing_details($id);
-			$this->loadViews('pipa/pipa_details', $this->global, $data, null);
-		}
+		$result = $this->Pipa_model->pipaListing_details($id);
+		echo json_encode($result);
 	}
 	public function details_pipaRencana()
 	{
