@@ -6,6 +6,7 @@ class Manometer extends BaseController
 {
 	function __construct()
 	{
+		
 		parent::__construct();
 		$this->load->model('tekanan_model');
 		$this->isLoggedIn();
