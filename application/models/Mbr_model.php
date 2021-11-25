@@ -3,11 +3,12 @@
 class Mbr_model extends CI_Model
 {
 	/*MBR Model*/
-	function mbrListing($rows, $offset, $penginput, $nama, $surv)
+	function mbrListing($rows, $offset, $penginput, $nama, $alamat, $surv)
 	{
 		$result = (object)[];
 		if ($penginput != null) $r = $this->mbrPenginput($offset, $rows, $penginput);
 		elseif ($nama != null) $r = $this->mbrNama($offset, $rows, $nama);
+		elseif ($alamat != null) $r = $this->mbrAlamat($offset, $rows, $alamat);
 		elseif ($surv != null) $r = $this->mbrSurv($offset, $rows, $surv);
 		else $r = $this->mbrDefault($offset, $rows);
 		$result->rows = [];
@@ -126,6 +127,18 @@ class Mbr_model extends CI_Model
 			->get()
 			->result();
 		$data['tot'] = $this->db->select('COUNT(ID) AS total')->like('nama', $nama)->get('sr_mbr')->result()[0]->total;
+		return $data;
+	}
+
+	function mbrAlamat($offset, $rows, $alamat)
+	{
+		$data['data'] = $this->db
+			->from('sr_mbr')
+			->like('alamat', $alamat)
+			->limit($offset, $rows)
+			->get()
+			->result();
+		$data['tot'] = $this->db->select('COUNT(ID) AS total')->like('alamat', $alamat)->get('sr_mbr')->result()[0]->total;
 		return $data;
 	}
 

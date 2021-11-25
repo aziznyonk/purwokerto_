@@ -3,11 +3,12 @@
 class Pelanggan_model extends CI_Model
 {
     /*Pelanngan Model*/
-    function pelaListing($offset = null, $rows = null, $nopel = null, $nama = null, $surv = null)
+    function pelaListing($offset = null, $rows = null, $nopel = null, $nama = null, $alamat = null, $surv = null)
     {
         $result = (object)[];
         if ($nopel != null) $r = $this->pelaNoPel($nopel);
         elseif ($nama != null) $r = $this->pelaNama($offset, $rows, $nama);
+        elseif ($alamat != null) $r = $this->pelaAlamat($offset, $rows, $alamat);
         elseif ($surv != null) $r = $this->pelaSurv($offset, $rows, $surv);
         else $r = $this->pelaDefault($offset, $rows);
         $result->rows = [];
@@ -90,6 +91,18 @@ class Pelanggan_model extends CI_Model
         $query = $this->db->get();
         $result = $query->result();
         $tot = $this->db->select('COUNT(ID) AS total')->like('nama', $nama)->get('pelanggan_pwt')->result()[0]->total;
+        return ["data" => $result, "tot" => $tot];
+    }
+
+    function pelaAlamat($offset, $rows, $alamat)
+    {
+        $this->db->select('ID, id_survey, nomor_pela, nama, alamat, status, klasifikasi, dma, golongan, cabang, zona_baca_, keterangan, username, tgl_input');
+        $this->db->from('pelanggan_pwt');
+        $this->db->like('alamat', $alamat);
+        $this->db->limit($offset, $rows);
+        $query = $this->db->get();
+        $result = $query->result();
+        $tot = $this->db->select('COUNT(ID) AS total')->like('alamat', $alamat)->get('pelanggan_pwt')->result()[0]->total;
         return ["data" => $result, "tot" => $tot];
     }
 

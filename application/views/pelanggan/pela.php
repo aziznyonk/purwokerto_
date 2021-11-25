@@ -4,10 +4,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <div class="content-wrapper">
     <section class="content-header">
-        <!-- <div class="input-group">
-            <a href="<?php echo base_url(); ?>index.php/Sr_mbrAdd"><button class="btn btn-default"><i class="fa fa-plus"></i> Add New Pelanggan</button></a>
-            <a href="<?php echo base_url(); ?>index.php/exportKml_pela" target="blank" download="Marker_Pelanggan.geojson" style="margin-left:10px"><button class="btn btn-info"><i class="fa fa-save"></i> Save Pelanggan KML</button></a>
-        </div> -->
+        <div class="input-group">
+            <!-- <a href="<?php echo base_url(); ?>index.php/Sr_mbrAdd"><button class="btn btn-default"><i class="fa fa-plus"></i> Add New Pelanggan</button></a> -->
+            <a href="<?php echo base_url(); ?>exportKml_pela" target="blank" download="Marker_Pelanggan.geojson" style="margin-left:10px"><button class="btn btn-info"><i class="fa fa-save"></i> Save Pelanggan KML</button></a>
+            <!-- <a href="<?php echo base_url(); ?>exportKml_pela" target="_blank" style="margin-left:10px"><button class="btn btn-info"><i class="fa fa-save"></i> Save Pelanggan KML</button></a> -->
+        </div>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Pelanggan</li>
@@ -44,6 +45,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     Cari :
                     <input type="text" class="easyui-searchbox" data-options="prompt:'ID manometer',searcher:doSearchMano">
                     <input type="text" class="easyui-searchbox" data-options="prompt:'Nama Pelanggan',searcher:doSearchNama">
+                    <input type="text" class="easyui-searchbox" data-options="prompt:'Alamat',searcher:doSearchAlamat">
                     <input type="text" class="easyui-searchbox" data-options="prompt:'ID Survey',searcher:doSearchSurv">
                     <a href="#" class="easyui-linkbutton" iconCls="icon-clear" onclick="resetTable()">Reset</a>
                 </form>
@@ -110,6 +112,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
     })
     let doSearchNama = e => doSearch({
         'nama': e
+    })
+    let doSearchAlamat = e => doSearch({
+        'alamat': e
     })
     let doSearchSurv = e => doSearch({
         'surv': e

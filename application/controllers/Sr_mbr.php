@@ -28,10 +28,11 @@ class Sr_mbr extends BaseController
 		$offset = ($page - 1) * $rows;
 		$penginput = isset($_POST['penginput']) ? $_POST['penginput'] : null;
 		$nama = isset($_POST['nama']) ? $_POST['nama'] : null;
+		$alamat = isset($_POST['alamat']) ? $_POST['alamat'] : null;
 		$surv = isset($_POST['surv']) ? $_POST['surv'] : null;
 
 		$this->global['title'] = 'Pelanggan';
-		echo json_encode($this->mbr_model->mbrListing($offset, $rows, $penginput, $nama, $surv));
+		echo json_encode($this->mbr_model->mbrListing($offset, $rows, $penginput, $nama, $alamat, $surv));
 	}
 
 	public function getDataPelId()

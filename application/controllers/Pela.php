@@ -27,10 +27,11 @@ class Pela extends BaseController
 		$offset = ($page - 1) * $rows;
 		$nopel = isset($_POST['nopel']) ? $_POST['nopel'] : null;
 		$nama = isset($_POST['nama']) ? $_POST['nama'] : null;
+		$alamat = isset($_POST['alamat']) ? $_POST['alamat'] : null;
 		$surv = isset($_POST['surv']) ? $_POST['surv'] : null;
 
 		$this->global['title'] = 'Pelanggan';
-		echo json_encode($this->Pelanggan_model->pelaListing($rows, $offset, $nopel, $nama, $surv));
+		echo json_encode($this->Pelanggan_model->pelaListing($rows, $offset, $nopel, $nama,  $alamat, $surv));
 	}
 
 	public function getDataPelId()

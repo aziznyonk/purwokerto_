@@ -46,6 +46,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     Cari :
                     <input type="text" class="easyui-searchbox" data-options="prompt:'ID Survey',searcher:doSearchSurv">
                     <input type="text" class="easyui-searchbox" data-options="prompt:'Nama Pelanggan',searcher:doSearchNama">
+                    <input type="text" class="easyui-searchbox" data-options="prompt:'Alamat',searcher:doSearchAlamat">
                     <input type="text" class="easyui-searchbox" data-options="prompt:'ID Penginput',searcher:doSearchPenginput">
                     <a href="#" class="easyui-linkbutton" iconCls="icon-clear" onclick="resetTable()">Reset</a>
                 </form>
@@ -162,12 +163,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
         'nama': e
     })
 
+    let doSearchAlamat = e => doSearch({
+        'alamat': e
+    })
+
     let doSearchSurv = e => doSearch({
         'surv': e
     })
 
     let doSearch = (req) => {
-        console.log(req)
+        // console.log(req)
         $('#tt').datagrid('load', req)
         $('.easyui-searchbox').textbox('reset')
     }
