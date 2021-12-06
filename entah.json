@@ -1,0 +1,2172 @@
+{
+    "type": "FeatureCollection",
+    "name": "Marker_Pelanggan",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.439381807374165,
+                    109.24461666494608
+                ]
+            },
+            "properties": {
+                "ID": "7",
+                "id_": "3672",
+                "id_survey": "0",
+                "nomor_pela": "0107569",
+                "nama": "IVANDER JOVIAN",
+                "alamat": "JL. GERILYA PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "1",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2019-01-15",
+                "latlng": "[{\"geometry\":[\"-7.439381807374165\",\"109.24461666494608\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil Test",
+                "foto": "JPEG_20190115_094943.jpg",
+                "username": "survey8",
+                "nama_pela": "IVANDER JOVIAN",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426576493497492,
+                    109.24111537635326
+                ]
+            },
+            "properties": {
+                "ID": "39",
+                "id_": "4762",
+                "id_survey": "0",
+                "nomor_pela": "0103797",
+                "nama": "DIRIN",
+                "alamat": "JL. P.TENDEAN PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426576493497492\",\"109.24111537635326\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181206_085305.jpg",
+                "username": "survey9",
+                "nama_pela": "DIRIN",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426516317581628,
+                    109.24100171774626
+                ]
+            },
+            "properties": {
+                "ID": "40",
+                "id_": "4765",
+                "id_survey": "0",
+                "nomor_pela": "0115707",
+                "nama": "WARSINI/SUDARMI",
+                "alamat": "JL. P.TENDEN NO.41 RT.01/08 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426516317581628\",\"109.24100171774626\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181206_084919.jpg",
+                "username": "survey9",
+                "nama_pela": "WARSINI/SUDARMI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.4269176010195395,
+                    109.2410409450531
+                ]
+            },
+            "properties": {
+                "ID": "41",
+                "id_": "4772",
+                "id_survey": "0",
+                "nomor_pela": "0103661",
+                "nama": "SAPAR SASTRO ATMOJO.",
+                "alamat": "JL. P.TENDEAN GG.01 PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.4269176010195395\",\"109.2410409450531\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181206_091608.jpg",
+                "username": "survey9",
+                "nama_pela": "SAPAR SASTRO ATMOJO.",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426910951752634,
+                    109.24107614904642
+                ]
+            },
+            "properties": {
+                "ID": "42",
+                "id_": "4773",
+                "id_survey": "0",
+                "nomor_pela": "0131861",
+                "nama": "DARSINI",
+                "alamat": "JL. P.TENDEAN GG.01 RT.01/08 PWT LOR",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426910951752634\",\"109.24107614904642\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga A2",
+                "foto": "JPEG_20181206_091407.jpg",
+                "username": "survey9",
+                "nama_pela": "DARSINI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426820521712725,
+                    109.24093633890152
+                ]
+            },
+            "properties": {
+                "ID": "43",
+                "id_": "4774",
+                "id_survey": "0",
+                "nomor_pela": "0103802",
+                "nama": "SUDARMIN",
+                "alamat": "JL. P.TENDEAN NO.14 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426820521712725\",\"109.24093633890152\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181206_091936.jpg",
+                "username": "survey9",
+                "nama_pela": "SUDARMIN",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426987750779261,
+                    109.2420806363225
+                ]
+            },
+            "properties": {
+                "ID": "44",
+                "id_": "4775",
+                "id_survey": "0",
+                "nomor_pela": "0125171",
+                "nama": "NY. WASINI",
+                "alamat": "JL. P.TENDEAN NO.41 RT.01/08 PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426987750779261\",\"109.2420806363225\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181206_092022.jpg",
+                "username": "survey9",
+                "nama_pela": "NY. WASINI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426521636999932,
+                    109.24101009964943
+                ]
+            },
+            "properties": {
+                "ID": "45",
+                "id_": "4776",
+                "id_survey": "0",
+                "nomor_pela": "0103768",
+                "nama": "RATAM JUNIAH",
+                "alamat": "JL. P.TENDEAN GG.01 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426521636999932\",\"109.24101009964943\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga A2",
+                "foto": "JPEG_20181206_084746.jpg",
+                "username": "survey9",
+                "nama_pela": "RATAM JUNIAH",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426634009696665,
+                    109.24078077077866
+                ]
+            },
+            "properties": {
+                "ID": "46",
+                "id_": "4777",
+                "id_survey": "0",
+                "nomor_pela": "0103774",
+                "nama": "MESJID ALFATAH",
+                "alamat": "JL. P.TENDEAN PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426634009696665\",\"109.24078077077866\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Sosial Khusus",
+                "foto": "JPEG_20181206_092127.jpg",
+                "username": "survey9",
+                "nama_pela": "MESJID ALFATAH",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.42677297944163,
+                    109.24064934253694
+                ]
+            },
+            "properties": {
+                "ID": "48",
+                "id_": "4779",
+                "id_survey": "0",
+                "nomor_pela": "0103772",
+                "nama": "ABDUL KADIR",
+                "alamat": "JL. P.TENDEAN PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.42677297944163\",\"109.24064934253694\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181206_092332.jpg",
+                "username": "survey9",
+                "nama_pela": "ABDUL KADIR",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426809882883278,
+                    109.24055278301239
+                ]
+            },
+            "properties": {
+                "ID": "49",
+                "id_": "4780",
+                "id_survey": "0",
+                "nomor_pela": "0127989",
+                "nama": "SUPRAPTI, SE",
+                "alamat": "JL. P.TENDEAN RT.01/08 PWT LOR",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426809882883278\",\"109.24055278301239\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181206_092623.jpg",
+                "username": "survey9",
+                "nama_pela": "SUPRAPTI, SE",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427265690001576,
+                    109.24051120877266
+                ]
+            },
+            "properties": {
+                "ID": "50",
+                "id_": "4781",
+                "id_survey": "0",
+                "nomor_pela": "0115706",
+                "nama": "SOEWARDJO",
+                "alamat": "JL. P.TENDEAN PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.427265690001576\",\"109.24051120877266\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181206_101058.jpg",
+                "username": "survey9",
+                "nama_pela": "SOEWARDJO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427484118190528,
+                    109.24054138362409
+                ]
+            },
+            "properties": {
+                "ID": "51",
+                "id_": "4789",
+                "id_survey": "0",
+                "nomor_pela": "0120640",
+                "nama": "SURYA SUTANTO",
+                "alamat": "RUKO EX.KODIM NO.26 PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.427484118190528\",\"109.24054138362409\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181206_101829.jpg",
+                "username": "survey9",
+                "nama_pela": "SURYA SUTANTO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427772363442648,
+                    109.24062822014093
+                ]
+            },
+            "properties": {
+                "ID": "52",
+                "id_": "4790",
+                "id_survey": "0",
+                "nomor_pela": "0120641",
+                "nama": "SURYA SUTANTO",
+                "alamat": "RUKO EX.KODIM NO.25 PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.427772363442648\",\"109.24062822014093\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181206_101903.jpg",
+                "username": "survey9",
+                "nama_pela": "SURYA SUTANTO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426461461076562,
+                    109.24062855541706
+                ]
+            },
+            "properties": {
+                "ID": "53",
+                "id_": "4951",
+                "id_survey": "0",
+                "nomor_pela": "0103784",
+                "nama": "SUHARJONO",
+                "alamat": "JL. P.TENDEAN RT.01/08 PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426461461076562\",\"109.24062855541706\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181206_092935.jpg",
+                "username": "survey9",
+                "nama_pela": "SUHARJONO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426458468903361,
+                    109.24057558178902
+                ]
+            },
+            "properties": {
+                "ID": "54",
+                "id_": "4952",
+                "id_survey": "0",
+                "nomor_pela": "0103795",
+                "nama": "HERMANTO TEDJO",
+                "alamat": "JL. P.TENDEAN NO.12 RT.01/08 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-06",
+                "latlng": "[{\"geometry\":[\"-7.426458468903361\",\"109.24057558178902\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181206_092902.jpg",
+                "username": "survey9",
+                "nama_pela": "HERMANTO TEDJO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.4270349605638595,
+                    109.23823904246092
+                ]
+            },
+            "properties": {
+                "ID": "56",
+                "id_": "4955",
+                "id_survey": "0",
+                "nomor_pela": "0103586",
+                "nama": "KANTOR PWI BMS",
+                "alamat": "JL. JEND.SUDIRMAN NO.211 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.4270349605638595\",\"109.23823904246092\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Instansi Pemerintah",
+                "foto": "JPEG_20181219_121140.jpg",
+                "username": "survey8",
+                "nama_pela": "KANTOR PWI BMS",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427154647319009,
+                    109.23840936273336
+                ]
+            },
+            "properties": {
+                "ID": "57",
+                "id_": "4956",
+                "id_survey": "0",
+                "nomor_pela": "0103574",
+                "nama": "PT.BTN ( PERSRO )",
+                "alamat": "JL. JEND.SUDIRMAN NO.431 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427154647319009\",\"109.23840936273336\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Besar",
+                "foto": "JPEG_20181219_121243.jpg",
+                "username": "survey8",
+                "nama_pela": "PT.BTN ( PERSRO )",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427153649929515,
+                    109.23851631581783
+                ]
+            },
+            "properties": {
+                "ID": "58",
+                "id_": "4957",
+                "id_survey": "0",
+                "nomor_pela": "0103585",
+                "nama": "BANK SYARIAH MANDIRI",
+                "alamat": "JL. JEND.SUDIRMAN NO.211B PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427153649929515\",\"109.23851631581783\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Besar",
+                "foto": "JPEG_20181219_121401.jpg",
+                "username": "survey8",
+                "nama_pela": "BANK SYARIAH MANDIRI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427478466320942,
+                    109.23913992941378
+                ]
+            },
+            "properties": {
+                "ID": "59",
+                "id_": "4958",
+                "id_survey": "0",
+                "nomor_pela": "0103575",
+                "nama": "KANTOR POS & GIRO",
+                "alamat": "JL. JEND.SUDIRMAN RT.03/04 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427478466320942\",\"109.23913992941378\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Besar",
+                "foto": "JPEG_20181219_121618.jpg",
+                "username": "survey8",
+                "nama_pela": "KANTOR POS & GIRO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427450206971964,
+                    109.23920329660177
+                ]
+            },
+            "properties": {
+                "ID": "60",
+                "id_": "4959",
+                "id_survey": "0",
+                "nomor_pela": "0103576",
+                "nama": "HARYANI ( TK.ROTI )",
+                "alamat": "JL. JEND.SUDIRMAN NO.217 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427450206971964\",\"109.23920329660177\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_121754.jpg",
+                "username": "survey8",
+                "nama_pela": "HARYANI ( TK.ROTI )",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427474809228828,
+                    109.23927940428257
+                ]
+            },
+            "properties": {
+                "ID": "61",
+                "id_": "4960",
+                "id_survey": "0",
+                "nomor_pela": "0103577",
+                "nama": "R.RAHADI",
+                "alamat": "JL. JEND.SUDIRMAN NO.219 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427474809228828\",\"109.23927940428257\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_121903.jpg",
+                "username": "survey8",
+                "nama_pela": "R.RAHADI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427542299196658,
+                    109.23940815031528
+                ]
+            },
+            "properties": {
+                "ID": "62",
+                "id_": "4961",
+                "id_survey": "0",
+                "nomor_pela": "0133053",
+                "nama": "CENY WIDIASTUTI 7",
+                "alamat": "JL. JEND.SUDIRMAN PWT (TMR TK.AROMA).",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427542299196658\",\"109.23940815031528\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_1219031.jpg",
+                "username": "survey8",
+                "nama_pela": "CENY WIDIASTUTI 7",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427542299196658,
+                    109.23940815031528
+                ]
+            },
+            "properties": {
+                "ID": "63",
+                "id_": "4962",
+                "id_survey": "0",
+                "nomor_pela": "0133052",
+                "nama": "CENY WIDIASTUTI 6",
+                "alamat": "JL. JEND.SUDIRMAN PWT (TMR TK.AROMA).",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Cabut Meter",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427542299196658\",\"109.23940815031528\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_122103.jpg",
+                "username": "survey8",
+                "nama_pela": "CENY WIDIASTUTI 6",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427542299196658,
+                    109.23940815031528
+                ]
+            },
+            "properties": {
+                "ID": "64",
+                "id_": "4963",
+                "id_survey": "0",
+                "nomor_pela": "0133051",
+                "nama": "CENY WIDIASTUTI 5",
+                "alamat": "JL. JEND.SUDIRMAN PWT (TMR TK.AROMA).",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427542299196658\",\"109.23940815031528\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_122126.jpg",
+                "username": "survey8",
+                "nama_pela": "CENY WIDIASTUTI 5",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.4275196917209065,
+                    109.23952750861645
+                ]
+            },
+            "properties": {
+                "ID": "65",
+                "id_": "4964",
+                "id_survey": "0",
+                "nomor_pela": "0133050",
+                "nama": "CENY WIDIASTUTI 4",
+                "alamat": "JL. JEND.SUDIRMAN PWT (TMR TK.AROMA).",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.4275196917209065\",\"109.23952750861645\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_122159.jpg",
+                "username": "survey8",
+                "nama_pela": "CENY WIDIASTUTI 4",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.4275196917209065,
+                    109.23952750861645
+                ]
+            },
+            "properties": {
+                "ID": "66",
+                "id_": "4965",
+                "id_survey": "0",
+                "nomor_pela": "0133049",
+                "nama": "CENY WIDIASTUTI 3",
+                "alamat": "JL. JEND.SUDIRMAN PWT (TMR TK.AROMA).",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.4275196917209065\",\"109.23952750861645\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_122225.jpg",
+                "username": "survey8",
+                "nama_pela": "CENY WIDIASTUTI 3",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427531660384679,
+                    109.23957511782645
+                ]
+            },
+            "properties": {
+                "ID": "67",
+                "id_": "4966",
+                "id_survey": "0",
+                "nomor_pela": "0133048",
+                "nama": "CENY WIDIASTUTI 2",
+                "alamat": "JL. JEND.SUDIRMAN PWT (TMR TK.AROMA).",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427531660384679\",\"109.23957511782645\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_122255.jpg",
+                "username": "survey8",
+                "nama_pela": "CENY WIDIASTUTI 2",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427531660384679,
+                    109.23957511782645
+                ]
+            },
+            "properties": {
+                "ID": "68",
+                "id_": "4967",
+                "id_survey": "0",
+                "nomor_pela": "0133047",
+                "nama": "CENY WIDIASTUTI 1",
+                "alamat": "JL. JEND.SUDIRMAN RUKO NO.09 PWT (TMR TK.AROMA).",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427531660384679\",\"109.23957511782645\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_122311.jpg",
+                "username": "survey8",
+                "nama_pela": "CENY WIDIASTUTI 1",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427641040658029,
+                    109.23977293074131
+                ]
+            },
+            "properties": {
+                "ID": "69",
+                "id_": "4968",
+                "id_survey": "0",
+                "nomor_pela": "0103579",
+                "nama": "ASS BUMI PUTRA 1912",
+                "alamat": "JL. JEND.SUDIRMAN NO.22 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427641040658029\",\"109.23977293074131\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_122624.jpg",
+                "username": "survey8",
+                "nama_pela": "ASS BUMI PUTRA 1912",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427585186904827,
+                    109.23978500068188
+                ]
+            },
+            "properties": {
+                "ID": "70",
+                "id_": "4969",
+                "id_survey": "0",
+                "nomor_pela": "0103580",
+                "nama": "TAN TJOEN DJAN",
+                "alamat": "JL. JEND.SUDIRMAN NO.225 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427585186904827\",\"109.23978500068188\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181219_122819.jpg",
+                "username": "survey8",
+                "nama_pela": "TAN TJOEN DJAN",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427028311298736,
+                    109.24005154520272
+                ]
+            },
+            "properties": {
+                "ID": "71",
+                "id_": "4970",
+                "id_survey": "0",
+                "nomor_pela": "0103572",
+                "nama": "BUDI HARTONO",
+                "alamat": "JL. BROBAHAN SEL. PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-19",
+                "latlng": "[{\"geometry\":[\"-7.427028311298736\",\"109.24005154520272\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B2",
+                "foto": "JPEG_20181219_123038.jpg",
+                "username": "survey8",
+                "nama_pela": "BUDI HARTONO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426974452247475,
+                    109.24024734646082
+                ]
+            },
+            "properties": {
+                "ID": "73",
+                "id_": "4972",
+                "id_survey": "0",
+                "nomor_pela": "0103440",
+                "nama": "PT.SRI TAMA RATU",
+                "alamat": "JL. P.TENDEAN PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426974452247475\",\"109.24024734646082\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Besar",
+                "foto": "JPEG_20181220_092345.jpg",
+                "username": "survey8",
+                "nama_pela": "PT.SRI TAMA RATU",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427556595099848,
+                    109.24041498452425
+                ]
+            },
+            "properties": {
+                "ID": "74",
+                "id_": "4973",
+                "id_survey": "0",
+                "nomor_pela": "0132977",
+                "nama": "WENKY",
+                "alamat": "TAMARA PLAZA RUANG 122 JL JEND.SUDIRMAN PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.427556595099848\",\"109.24041498452425\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181220_092656.jpg",
+                "username": "survey8",
+                "nama_pela": "WENKY",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426498364544354,
+                    109.24050115048885
+                ]
+            },
+            "properties": {
+                "ID": "75",
+                "id_": "4974",
+                "id_survey": "0",
+                "nomor_pela": "0133920",
+                "nama": "SUSANTO RUKO I",
+                "alamat": "JL. P.TENDEAN PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426498364544354\",\"109.24050115048885\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181221_094136.jpg",
+                "username": "survey8",
+                "nama_pela": "SUSANTO RUKO I",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426481408897377,
+                    109.24051389098167
+                ]
+            },
+            "properties": {
+                "ID": "76",
+                "id_": "4975",
+                "id_survey": "0",
+                "nomor_pela": "0133921",
+                "nama": "SUSANTO RUKO II",
+                "alamat": "JL. P.TENDEAN PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426481408897377\",\"109.24051389098167\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181221_094235.jpg",
+                "username": "survey8",
+                "nama_pela": "SUSANTO RUKO II",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426455809193833,
+                    109.24050483852625
+                ]
+            },
+            "properties": {
+                "ID": "77",
+                "id_": "4976",
+                "id_survey": "0",
+                "nomor_pela": "0133922",
+                "nama": "SUSANTO - RUKO III",
+                "alamat": "JL. P.TENDEAN PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426455809193833\",\"109.24050483852625\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181221_094309.jpg",
+                "username": "survey8",
+                "nama_pela": "SUSANTO - RUKO III",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426455809193833,
+                    109.24050483852625
+                ]
+            },
+            "properties": {
+                "ID": "78",
+                "id_": "4977",
+                "id_survey": "0",
+                "nomor_pela": "0133923",
+                "nama": "HONGGO P- RUKO IV",
+                "alamat": "JL. P.TENDEAN PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426455809193833\",\"109.24050483852625\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181221_094359.jpg",
+                "username": "survey8",
+                "nama_pela": "HONGGO P- RUKO IV",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426327810653748,
+                    109.2405366897583
+                ]
+            },
+            "properties": {
+                "ID": "79",
+                "id_": "4978",
+                "id_survey": "0",
+                "nomor_pela": "0103610",
+                "nama": "SOENARSO YUWONO",
+                "alamat": "JL. P.TENDEAN PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426327810653748\",\"109.2405366897583\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181221_094528.jpg",
+                "username": "survey8",
+                "nama_pela": "SOENARSO YUWONO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426226076722584,
+                    109.24055345356464
+                ]
+            },
+            "properties": {
+                "ID": "80",
+                "id_": "4979",
+                "id_survey": "0",
+                "nomor_pela": "0103611",
+                "nama": "DARMANTO",
+                "alamat": "JL. P.TENDEAN NO.03 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426226076722584\",\"109.24055345356464\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Niaga Kecil",
+                "foto": "JPEG_20181221_094604.jpg",
+                "username": "survey8",
+                "nama_pela": "DARMANTO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426360724567624,
+                    109.24025706946851
+                ]
+            },
+            "properties": {
+                "ID": "81",
+                "id_": "4999",
+                "id_survey": "0",
+                "nomor_pela": "0123309",
+                "nama": "IDA (SUKARSO ALM)",
+                "alamat": "JL. BROBAHAN TMR NO.90A PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426360724567624\",\"109.24025706946851\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181221_093602.jpg",
+                "username": "survey8",
+                "nama_pela": "IDA (SUKARSO ALM)",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426632347378871,
+                    109.24026980996133
+                ]
+            },
+            "properties": {
+                "ID": "82",
+                "id_": "5000",
+                "id_survey": "0",
+                "nomor_pela": "0134775",
+                "nama": "RETNO MULYANI",
+                "alamat": "JL. BROBAHAN TMR NO.94 RT.02/04 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426632347378871\",\"109.24026980996133\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181221_093645.jpg",
+                "username": "survey8",
+                "nama_pela": "RETNO MULYANI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426655287363803,
+                    109.24033854156733
+                ]
+            },
+            "properties": {
+                "ID": "83",
+                "id_": "5001",
+                "id_survey": "0",
+                "nomor_pela": "0138311",
+                "nama": "HERI SETIADI",
+                "alamat": "JL. BROBAHAN TMR NO.96A RT.02/04 KRANJI PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-21",
+                "latlng": "[{\"geometry\":[\"-7.426655287363803\",\"109.24033854156733\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga A2",
+                "foto": "JPEG_20181221_0937561.jpg",
+                "username": "survey8",
+                "nama_pela": "HERI SETIADI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.427037952733142,
+                    109.24009077250956
+                ]
+            },
+            "properties": {
+                "ID": "85",
+                "id_": "5003",
+                "id_survey": "0",
+                "nomor_pela": "0103442",
+                "nama": "TAUHID",
+                "alamat": "JL. BROBAHAN SEL. NO.17 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.427037952733142\",\"109.24009077250956\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_092248.jpg",
+                "username": "survey8",
+                "nama_pela": "TAUHID",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.42694453054947,
+                    109.24013435840605
+                ]
+            },
+            "properties": {
+                "ID": "86",
+                "id_": "5004",
+                "id_survey": "0",
+                "nomor_pela": "0103443",
+                "nama": "SANTOSO",
+                "alamat": "JL. BROBAHAN NO. 97 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.42694453054947\",\"109.24013435840605\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_092216.jpg",
+                "username": "survey8",
+                "nama_pela": "SANTOSO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426806225785592,
+                    109.23980075865985
+                ]
+            },
+            "properties": {
+                "ID": "87",
+                "id_": "5005",
+                "id_survey": "0",
+                "nomor_pela": "0103444",
+                "nama": "YOHANES KUSMADI",
+                "alamat": "JL. BROBAHAN SEL. NO.139 RW.06 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426806225785592\",\"109.23980075865985\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_093032.jpg",
+                "username": "survey8",
+                "nama_pela": "YOHANES KUSMADI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426891336414666,
+                    109.239668995142
+                ]
+            },
+            "properties": {
+                "ID": "88",
+                "id_": "5006",
+                "id_survey": "0",
+                "nomor_pela": "0103455",
+                "nama": "BAMBANG SUPRIYADI",
+                "alamat": "JL. BROBAHAN SEL. NO.128 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426891336414666\",\"109.239668995142\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_093136.jpg",
+                "username": "survey8",
+                "nama_pela": "BAMBANG SUPRIYADI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426822848956632,
+                    109.23943195492029
+                ]
+            },
+            "properties": {
+                "ID": "90",
+                "id_": "5008",
+                "id_survey": "0",
+                "nomor_pela": "0103571",
+                "nama": "FX.HARY GUNAWAN",
+                "alamat": "JL. BROBAHAN SEL. NO.124 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426822848956632\",\"109.23943195492029\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_093255.jpg",
+                "username": "survey8",
+                "nama_pela": "FX.HARY GUNAWAN",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426720117749558,
+                    109.23942591995001
+                ]
+            },
+            "properties": {
+                "ID": "91",
+                "id_": "5009",
+                "id_survey": "0",
+                "nomor_pela": "0129385",
+                "nama": "SUWARDI  MEDALI",
+                "alamat": "JL. BROBAHAN SEL. NO.123 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426720117749558\",\"109.23942591995001\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B2",
+                "foto": "JPEG_20181220_093359.jpg",
+                "username": "survey8",
+                "nama_pela": "SUWARDI  MEDALI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.42666692358759,
+                    109.23925057053566
+                ]
+            },
+            "properties": {
+                "ID": "92",
+                "id_": "5010",
+                "id_survey": "0",
+                "nomor_pela": "0111873",
+                "nama": "NY.MURYATI",
+                "alamat": "JL. BROBAHAN SEL. PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.42666692358759\",\"109.23925057053566\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "The file was only partially uploaded.",
+                "username": "survey8",
+                "nama_pela": "NY.MURYATI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.42664764070229,
+                    109.23920463770628
+                ]
+            },
+            "properties": {
+                "ID": "93",
+                "id_": "5011",
+                "id_survey": "0",
+                "nomor_pela": "0135969",
+                "nama": "SUBADI",
+                "alamat": "JL. BROBAHAN  SEL.  NO.118  KRANJI PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.42664764070229\",\"109.23920463770628\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_093735.jpg",
+                "username": "survey8",
+                "nama_pela": "SUBADI",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.4266233708627025,
+                    109.23913858830929
+                ]
+            },
+            "properties": {
+                "ID": "94",
+                "id_": "5012",
+                "id_survey": "0",
+                "nomor_pela": "0103569",
+                "nama": "NGADIMIN",
+                "alamat": "JL. BROBAHAN SEL. RT.03/04 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.4266233708627025\",\"109.23913858830929\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B2",
+                "foto": "JPEG_20181220_093859.jpg",
+                "username": "survey8",
+                "nama_pela": "NGADIMIN",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.42658679986899,
+                    109.23901855945589
+                ]
+            },
+            "properties": {
+                "ID": "95",
+                "id_": "5013",
+                "id_survey": "0",
+                "nomor_pela": "0103568",
+                "nama": "DASUKI UMAR",
+                "alamat": "JL. BROBAHAN NO.12881 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.42658679986899\",\"109.23901855945589\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_093954.jpg",
+                "username": "survey8",
+                "nama_pela": "DASUKI UMAR",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426694850523427,
+                    109.23880364745855
+                ]
+            },
+            "properties": {
+                "ID": "96",
+                "id_": "5014",
+                "id_survey": "0",
+                "nomor_pela": "0111790",
+                "nama": "RD.KANTOR POS I",
+                "alamat": "JL. BROBAHAN SEL. RT.03/06 PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426694850523427\",\"109.23880364745855\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_094131.jpg",
+                "username": "survey8",
+                "nama_pela": "RD.KANTOR POS I",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.42659511145874,
+                    109.23881839960814
+                ]
+            },
+            "properties": {
+                "ID": "97",
+                "id_": "5015",
+                "id_survey": "0",
+                "nomor_pela": "0111791",
+                "nama": "RD,KANTOR POS II",
+                "alamat": "JL. BROBAHAN SEL. RT.03/04 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.42659511145874\",\"109.23881839960814\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_094228.jpg",
+                "username": "survey8",
+                "nama_pela": "RD,KANTOR POS II",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426629355206841,
+                    109.23875402659178
+                ]
+            },
+            "properties": {
+                "ID": "98",
+                "id_": "5016",
+                "id_survey": "0",
+                "nomor_pela": "0114857",
+                "nama": "SRI BAYU RETNOWATI S",
+                "alamat": "JL. BROBAHAN SEL. RT.03/04 PWT",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426629355206841\",\"109.23875402659178\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B2",
+                "foto": "JPEG_20181220_094421.jpg",
+                "username": "survey8",
+                "nama_pela": "SRI BAYU RETNOWATI S",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426546239308779,
+                    109.23873122781515
+                ]
+            },
+            "properties": {
+                "ID": "99",
+                "id_": "5017",
+                "id_survey": "0",
+                "nomor_pela": "0137343",
+                "nama": "NUR",
+                "alamat": "JL. BROBAHAN NO.110 RT.03/04 KRANJI PWT (BEL. RRI).",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426546239308779\",\"109.23873122781515\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B2",
+                "foto": "JPEG_20181220_094909.jpg",
+                "username": "survey8",
+                "nama_pela": "NUR",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426566187125751,
+                    109.23872787505387
+                ]
+            },
+            "properties": {
+                "ID": "103",
+                "id_": "5021",
+                "id_survey": "0",
+                "nomor_pela": "0115226",
+                "nama": "DJOKO PRATIKTO",
+                "alamat": "JL. PURWOBAKTI NO.109 (BEL.RRI) PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426566187125751\",\"109.23872787505387\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B1",
+                "foto": "JPEG_20181220_095027.jpg",
+                "username": "survey8",
+                "nama_pela": "DJOKO PRATIKTO",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.4261396361089735,
+                    109.23862796276809
+                ]
+            },
+            "properties": {
+                "ID": "104",
+                "id_": "5022",
+                "id_survey": "0",
+                "nomor_pela": "0103460",
+                "nama": "MAYOR SAYOGA",
+                "alamat": "JL. BROBAHAN SEL. NO.43 RT.03/04 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.4261396361089735\",\"109.23862796276809\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B2",
+                "foto": "JPEG_20181220_0955271.jpg",
+                "username": "survey8",
+                "nama_pela": "MAYOR SAYOGA",
+                "auto_update": null
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.426168892933955,
+                    109.2386081814766
+                ]
+            },
+            "properties": {
+                "ID": "105",
+                "id_": "5023",
+                "id_survey": "0",
+                "nomor_pela": "0103461",
+                "nama": "SUPARDJIMAN",
+                "alamat": "JL. BROBAHAN SEL. RT.03/04 PWT.",
+                "rt": null,
+                "rw": null,
+                "kelurahan": "",
+                "kecamatan": "",
+                "kabupaten": "",
+                "golongan": "",
+                "status": "Aktif",
+                "dma": "",
+                "cabang": "",
+                "zona_baca_": null,
+                "keterangan": "",
+                "tgl_input": "2018-12-20",
+                "latlng": "[{\"geometry\":[\"-7.426168892933955\",\"109.2386081814766\"],\"type\":\"MARKER\"}]",
+                "klasifikasi": "Rumah Tangga B2",
+                "foto": "JPEG_20181220_0954261.jpg",
+                "username": "survey8",
+                "nama_pela": "SUPARDJIMAN",
+                "auto_update": null
+            }
+        }
+    ],
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    }
+}

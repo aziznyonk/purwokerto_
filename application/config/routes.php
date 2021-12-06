@@ -104,6 +104,9 @@ $route['tekanan/getDataTekanan']            = 'manometer/getDataTekanan';
 $route['tekanan/details_pipa/(:num)']       = 'manometer/details_pipa/$1';
 $route['tekanan/getMap/(:any)/(:any)']      = 'manometer/getMap/$1/$2';
 $route['master_tekanan']                    = 'MasterTekanan';
+$route['master_tekanan/ListTekanan']        = 'MasterTekanan/ListTekanan';
+$route['master_tekanan/Search/(:any)']        = 'MasterTekanan/Search/$1';
+$route['master_tekanan/Update/(:any)']        = 'MasterTekanan/Update/$1';
 
 /*ini route bagian WEB GIS*/
 $route['maps']                      = 'map';

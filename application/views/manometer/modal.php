@@ -30,43 +30,43 @@
         <div id="modal-body" class="modal-body">
             <form action="#" id="frmEdit" class="form-horizontal">
                 <div class="form-group">
-                    <label for="id_manometer" class="control-label col-lg-2">ID Manometer</label>
+                    <label for="id_manometer" class="control-label col-lg-3">ID Manometer</label>
                     <div class="col-lg-4">
                         <input type="text" name="id_manometer" id="id_manometer" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="nama_manometer" class="control-label col-lg-2">Nama Manometer</label>
+                    <label for="nama_manometer" class="control-label col-lg-3">Nama Manometer</label>
                     <div class="col-lg-4">
                         <input type="text" name="nama_manometer" id="nama_manometer" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="lokasi" class="control-label col-lg-2">Lokasi</label>
+                    <label for="lokasi" class="control-label col-lg-3">Lokasi</label>
                     <div class="col-lg-4">
                         <input type="text" name="lokasi" id="lokasi" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="latlng" class="control-label col-lg-2">Latitude Longitude</label>
+                    <label for="latlng" class="control-label col-lg-3">Latitude Longitude</label>
                     <div class="col-lg-4">
                         <input type="text" name="latlng" id="latlng" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="kondisi" class="control-label col-lg-2">Kondisi</label>
+                    <label for="kondisi" class="control-label col-lg-3">Kondisi</label>
                     <div class="col-lg-4">
                         <input type="text" name="kondisi" id="kondisi" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="tekanan" class="control-label col-lg-2">Tekanan</label>
+                    <label for="tekanan" class="control-label col-lg-3">Tekanan</label>
                     <div class="col-lg-4">
                         <input type="text" name="tekanan" id="tekanan" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="keterangan" class="control-label col-lg-2">Keterangan</label>
+                    <label for="keterangan" class="control-label col-lg-3">Keterangan</label>
                     <div class="col-lg-4">
                         <input type="text" name="keterangan" id="keterangan" class="form-control">
                     </div>

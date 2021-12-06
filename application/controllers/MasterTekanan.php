@@ -17,7 +17,26 @@ class MasterTekanan extends BaseController
             $this->loadThis();
         } else {
             $this->global['title'] = 'Master Tekanan';
-            $this->loadViews('manometer/tekanan', $this->global, [], null);
+            $this->global['cusScript'] = '<script src="' . base_url() . 'assets/custom/js/masterTekanan.js"></script>';
+            $this->loadViews('masterTekanan/manometer', $this->global, [], null);
         }
+    }
+
+    public function ListTekanan()
+    {
+        $res = $this->MasterTekanan_model->listTekanan();
+        echo json_encode($res);
+    }
+
+    public function Search($id)
+    {
+        $res = $this->MasterTekanan_model->find($id);
+        echo json_encode($res);
+    }
+
+    public function Update($id = null)
+    {
+        $res = $this->MasterTekanan_model->update($id);
+        echo json_encode($res);
     }
 }

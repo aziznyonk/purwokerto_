@@ -18,3 +18,4 @@ application/logs/*
 application/config/config.php
 application/config/database.php
 rest/*
+application/vendor/*
