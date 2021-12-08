@@ -17,28 +17,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
 				<h3 class="box-title">Table Data Tekanan</h3>
 			</div>
 			<div class="box-body">
-				<!-- <table id="tt" class="easyui-datagrid" title="Load Data" pagination="true" data-options="url:'<?php base_url(); ?>/purwokerto_/tekanan/getDataTekanan',method:'post',toolbar:'#tb',footer:'#ft'" style="width:100%;">
-					<thead>
-						<tr>
-							<th field="ID">ID</th>
-							<th field="id_manometer">ID Manometer</th>
-							<th field="nama_manometer">Nama Manometer</th>
-							<th field="lokasi">Lokasi</th>
-							<th field="kondisi">Kondisi</th>
-							<th field="tekanan">Tekanan</th>
-							<th field="koordinat">Koordinat</th>
-							<th field="keterangan">Keterangan</th>
-							<th field="action" class="text-center">Action</th>
-						</tr>
-					</thead>
-					<tbody></tbody>
-				</table> -->
 				<table id="tt" class="easyui-datagrid"></table>
 				<form method="post" action="#" id="tb" style="padding:2px 5px;">
 					Cari :
 					<input id="tgl" class="easyui" style="width:110px">
-					<input type="text" class="easyui-searchbox" data-options="prompt:'ID manometer',searcher:doSearchMano">
-					<input type="text" class="easyui-searchbox" data-options="prompt:'Nama Petugas',searcher:doSearchNama">
+					<input type="text" class="easyui-searchbox" style="width: 400px;" data-options="prompt:'Manometer, Petugas, Lokasi',searcher:doSearch">
 					<a href="#" class="easyui-linkbutton" iconCls="icon-clear" onclick="resetTable()">Reset</a>
 				</form>
 			</div>
