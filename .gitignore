@@ -19,3 +19,4 @@ application/config/config.php
 application/config/database.php
 rest/*
 application/vendor/*
+application/config/database.php
