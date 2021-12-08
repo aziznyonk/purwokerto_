@@ -11,7 +11,7 @@ $(function () {
         title: 'Data Manometer',
         url: `${baseUri}/tekanan/getDataTekanan`,
         columns: [[
-            { field: 'ID', title: 'ID', sortable: true },
+            // { field: 'ID', title: 'ID', sortable: true },
             { field: 'id_manometer', title: 'ID Manometer', sortable: true },
             { field: 'nama_manometer', title: 'Nama Manometer', sortable: true },
             { field: 'lokasi', title: 'Lokasi', sortable: true },
@@ -19,9 +19,24 @@ $(function () {
             { field: 'tekanan', title: 'Tekanan', sortable: true },
             { field: 'tgl_baca_s', title: 'Tgl Baca', sortable: true },
             { field: 'nama', title: 'Petugas', sortable: true },
-            { field: 'koordinat', title: 'Koordinat' },
+            {
+                field: 'latlng', title: 'Koordinat',
+                formatter: (value, row) => {
+                    const latlng = JSON.parse(value)[0]
+                    const tekanan = row.tekanan
+                    const link = `<a href="#" onClick="openModal(${latlng.geometry[0]}, ${latlng.geometry[1]}, ${tekanan})" data-toggle="modal" data-target="#myModal">${latlng.geometry[0]},${latlng.geometry[1]}</a>`
+                    return link
+                }
+            },
             { field: 'keterangan', title: 'Keterangan' },
-            { field: 'action', title: 'Action' },
+            {
+                field: 'ID', title: 'Action',
+                formatter: (value) => {
+                    const btnEdit = `<a href="#" onClick="edit(${value})" data-toggle="modal" data-target="#editModal" class="icon fa fa-pencil"></a>`
+                    const btnHapus = `<a href="#" onclick="hapus(${value})" class="btn btn-small text-danger icon fa fa-trash"></a>`
+                    return `${btnEdit} ${btnHapus}`
+                }
+            }
         ]],
         rownumbers: true,
         pagination: true,
@@ -190,11 +205,8 @@ let hapus = (ID) => {
     }
 }
 
-let doSearchMano = e => doSearch({ tgl: tgl.val(), idMano: e })
-let doSearchNama = e => doSearch({ tgl: tgl.val(), petugas: e })
-
-let doSearch = req => {
-    dg.datagrid('load', req)
+let doSearch = e => {
+    dg.datagrid('load', { cari: e })
     $('.easyui-searchbox').textbox('reset')
 }
 

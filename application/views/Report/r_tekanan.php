@@ -1,12 +1,21 @@
 <style>
     .container {
-        width: 100vw;
-        padding: 2vw;
+        max-width: 100vw;
+        padding-left: 2vw;
+        padding-right: 2vw;
     }
 
     .title {
-        display: flex;
+        display: grid;
         justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+    .title>h2 {
+        margin: auto;
+        width: 100vw;
+        padding-bottom: 5px;
     }
 
     .biodata {
@@ -14,7 +23,9 @@
     }
 
     .content {
+        max-width: 100vw;
         margin-bottom: 1em;
+        /* overflow-x: auto; */
     }
 
     .bordered {
@@ -24,13 +35,14 @@
     .bordered td,
     th {
         border: 1px solid black;
-        min-width: 50px;
-        padding-left: 5px;
-        padding-right: 5px;
+        min-width: 25px;
+        padding: 5px;
     }
 
     table {
         border-collapse: collapse;
+        width: 100%;
+        text-transform: uppercase;
     }
 </style>
 
@@ -43,28 +55,32 @@ if (in_array($bln, [4, 6, 9, 11])) $i = 30;
 
 <div class="container">
     <div class="title">
-        <h2>Laporan Harian Input Tekanan</h2>
+        <h2>PERUMDA AIR MINUM TIRTA SATRIA</h2>
+        <h2>CABANG {cabang}</h2>
+        <h2>PEMANTAUAN TEKANAN, JAM LAYANAN, & KUALITAS AIR</h2>
+        <h2>Bulan {bulan} {tahun}</h2>
     </div>
-
+    <hr>
     <div class="biodata">
-        <table>
-            <tr>
-                <td>Nama</td>
-                <td>: <?= $user->nama ?> (<?= $user->nipam ?>)</td>
-            </tr>
-            <tr>
-                <td>Bulan</td>
-                <td>: <?= $bulan ?> <?= $tahun ?></td>
-            </tr>
-        </table>
+        <h3>PENANGGUNG JAWAB JARINGAN : {nama} </h3>
     </div>
 
     <div class="content">
         <table border="1" class="bordered">
-            <thead>
+            <thead style="background-color: #010189; color:white;">
                 <tr>
-                    <th>No</th>
-                    <th nowrap>Manometer</th>
+                    <th rowspan="4">No</th>
+                    <th rowspan="4">Manometer</th>
+                    <th rowspan="4">Lokasi</th>
+
+                </tr>
+                <tr>
+                    <th colspan="<?= $i ?>">Waktu Pengukuran Manometer</th>
+                </tr>
+                <tr>
+                    <th colspan="<?= $i ?>">Bulan : {bulan} {tahun}</th>
+                </tr>
+                <tr>
                     <?php for ($x = 0; $x < $i; $x++) : ?>
                         <th><?= $x + 1 ?></th>
                     <?php endfor; ?>
@@ -75,7 +91,8 @@ if (in_array($bln, [4, 6, 9, 11])) $i = 30;
                 <?php foreach ($manometer as $m) : ?>
                     <tr>
                         <td><?= $n ?></td>
-                        <td nowrap><?= $m->id_manometer ?> (<?= $m->nama_manometer ?>)</td>
+                        <td nowrap><?= $m->nama_manometer ?></td>
+                        <td nowrap><?= $m->lokasi ?></td>
                         <?php for ($x = 0; $x < $i; $x++) {
                             $tgl = $x + 1;
                             $id_manometer = $m->id_manometer;

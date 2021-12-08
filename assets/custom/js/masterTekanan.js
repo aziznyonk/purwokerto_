@@ -7,26 +7,20 @@ $(document).ready(() => {
         title: 'Data Master Tekanan',
         url: `${baseUri}/master_tekanan/ListTekanan`,
         columns: [[
-            // { field: 'id', title: 'ID', sortable: true },
-            {
-                field: 'username', title: 'Username', sortable: true,
-                formatter: (value, row) => {
-                    return `${value}, (${row.nama})`
-                }
-            },
-            { field: 'kd_mano', title: 'Manometer', sortable: true },
-            { field: 'lokasi_mano', title: 'Lokasi', sortable: true },
-            {
-                field: 'tgl_input', title: 'Tanggal Input',
-                formatter: (value, row) => {
-                    return `${value} ${row.jam_input}`;
-                }
-            },
+            { field: 'id_', title: 'id_', sortable: true },
+            { field: 'id_manometer', title: 'ID Manometer', sortable: true, },
+            { field: 'nama_manometer', title: 'Manometer', sortable: true },
+            { field: 'cabang', title: 'Cabang', sortable: true },
+            { field: 'penanggung_jawab', title: 'Penanggung Jawab', sortable: true },
+            { field: 'lokasi', title: 'Lokasi' },
             { field: 'tekanan', title: 'tekanan', sortable: true },
+            { field: 'koneksi_pipa', title: 'Koneksi Pipa' },
+            { field: 'latlng', title: 'Koordinat' },
             {
-                field: 'id', title: 'action',
-                formatter: (value, row) => {
-                    return `<span id="btnEdit" href="#" class="btn btn-xs btn-warning icon fa fa-edit" onclick="doEdit(${value})"></span>`
+                field: 'ID', title: 'Action',
+                formatter: (value, row, index) => {
+                    const btn = `<button class="btn btn-xs btn-warning ico fa fa-edit" onClick="doEdit(${value})"></button>`
+                    return btn
                 }
             },
         ]],
@@ -49,18 +43,11 @@ $(document).ready(() => {
         return y + '-' + m + '-' + d;
     }
 
-
     $('#win').window('close');
 })
 
-let doSearchMano = e => doSearch({ kd_mano: e })
-
-let doSearchLokasi = e => doSearch({ lokasi_mano: e })
-
-let doSearchNama = e => doSearch({ username: e })
-
-let doSearch = (req) => {
-    dg.datagrid('load', req)
+let doSearch = e => {
+    dg.datagrid('load', { cari: e })
     $('.easyui-searchbox').textbox('reset')
 }
 
@@ -72,21 +59,22 @@ let resetTable = () => {
 let doEdit = async (id) => {
     $.getJSON(`${baseUri}/master_tekanan/Search/${id}`, json => {
         if (!json) return
-        $('#id').val(json.id)
-        $('#kd_mano').val(json.kd_mano)
-        $('#username').val(json.username)
-        $('#nama').val(json.nama)
-        $('#tgl_input').datebox('setValue', json.tgl_input)
-        $('#lokasi_mano').val(json.lokasi_mano)
-        $('#tekanan').val(json.tekanan)
+        $('#ID').val(json.ID)
+        $('#id_').val(json.id_)
+        $('#id_manometer').val(json.id_manometer)
+        $('#nama_manometer').val(json.nama_manometer)
+        $('#cabang').val(json.cabang)
+        $('#penanggung_jawab').val(json.penanggung_jawab)
+        $('#lokasi').val(json.lokasi)
+        $('#latlng').val(json.latlng)
+        $('#koneksi_pipa').val(json.koneksi_pipa)
         $('#win').window('open')
-
     })
 }
 
 $('#frmEdit').on('submit', () => {
     const frmData = $('#frmEdit').serializeArray()
-    $.post(`${baseUri}/master_tekanan/Update/${$('#id').val()}`, frmData, json => {
+    $.post(`${baseUri}/master_tekanan/Update/${$('#ID').val()}`, frmData, json => {
         if (json.code !== 201) return alert(json.message)
         alert(json.message)
         $('#btnReset').trigger('click')
@@ -96,6 +84,7 @@ $('#frmEdit').on('submit', () => {
 
 $('#btnReset').on('click', () => {
     $('#win').window('close')
+    resetTable()
 })
 
 let myformatter = (date) => {
@@ -104,6 +93,7 @@ let myformatter = (date) => {
     var d = date.getDate();
     return y + '-' + (m < 10 ? ('0' + m) : m) + '-' + (d < 10 ? ('0' + d) : d);
 }
+
 let myparser = (s) => {
     if (!s) return new Date();
     var ss = (s.split('-'));
@@ -116,3 +106,26 @@ let myparser = (s) => {
         return new Date();
     }
 }
+
+$.getJSON(`${baseUri}/Cabang`, json => {
+    json.map((r) => {
+        const str = `<option value='${r.org_code}'>${r.org_name}</option>`
+        $('#cabang').append(str)
+    })
+})
+
+// $('#cabang').on('change', (e) => {
+//     const org_code = $('#cabang').val()
+//     $('#nipam').find('.listNipam').remove().end()
+//     $.getJSON(`${baseUri}/Pegawai/cari/${org_code}`, json => {
+//         json.map((r) => {
+//             const str = `<option value='${r.nipam}' class='listNipam' data-nama='${r.nama}'>${r.nipam} - ${r.nama}</option>`
+//             $('#nipam').append(str)
+//         })
+//     })
+// })
+
+// $('#nipam').on('change', () => {
+//     const pj = $('#nipam').find(":selected").text()
+//     $('#penanggung_jawab').val(pj)
+// })

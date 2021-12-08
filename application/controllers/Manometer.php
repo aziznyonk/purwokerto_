@@ -26,16 +26,16 @@ class Manometer extends BaseController
 
 	public function getDataTekanan()
 	{
-		$page = isset($_POST['page']) ? intval($_POST['page']) : 1;
-		$rows = isset($_POST['rows']) ? intval($_POST['rows']) : 20;
-		$sort = isset($_POST['sort']) ? ['sort' => $_POST['sort'], 'order' => $_POST['order']] : null;
-		$offset = ($page - 1) * $rows;
-		$tgl = (isset($_POST['tgl']) && $_POST['tgl'] != '') ? date('Y-m-d', strtotime($_POST['tgl'])) : null;
-		$idMano = isset($_POST['idMano']) ? $_POST['idMano'] : null;
-		$petugas = isset($_POST['petugas']) ? $_POST['petugas'] : null;
+		// $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
+		// $rows = isset($_POST['rows']) ? intval($_POST['rows']) : 20;
+		// $sort = isset($_POST['sort']) ? ['sort' => $_POST['sort'], 'order' => $_POST['order']] : null;
+		// $offset = ($page - 1) * $rows;
+		// $tgl = (isset($_POST['tgl']) && $_POST['tgl'] != '') ? date('Y-m-d', strtotime($_POST['tgl'])) : null;
+		// $idMano = isset($_POST['idMano']) ? $_POST['idMano'] : null;
+		// $petugas = isset($_POST['petugas']) ? $_POST['petugas'] : null;
 
 		$this->global['title'] = 'Tekanan';
-		$result = $this->tekanan_model->tekananListing($tgl, $rows, $offset, $sort, $idMano, $petugas);
+		$result = $this->tekanan_model->tekananListing();
 		echo json_encode($result);
 	}
 

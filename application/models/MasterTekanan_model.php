@@ -3,20 +3,22 @@ if (!defined('BASEPATH')) exit('No direct script access allowed');
 
 class MasterTekanan_model extends CI_Model
 {
-    protected $select = "tekanan_manometer.id, 
-                        tekanan_manometer.id_, 
-                        tekanan_manometer.username,
-                        `user`.nama, 
-                        tekanan_manometer.kd_mano, 
-                        tekanan_manometer.merk_mano, 
-                        tekanan_manometer.lokasi_mano, 
-                        tekanan_manometer.tgl_pasang_mano, 
-                        tekanan_manometer.tgl_input, 
-                        tekanan_manometer.jam_input, 
-                        tekanan_manometer.kondisi_mano, 
-                        tekanan_manometer.elevasi_mano, 
-                        tekanan_manometer.tekanan";
+    protected $table = "manometer_2018";
+    protected $select = "manometer_2018.ID, 
+                        manometer_2018.id_, 
+                        manometer_2018.id_manometer, 
+                        manometer_2018.nama_manometer, 
+                        manometer_2018.penanggung_jawab, 
+                        manometer_2018.lokasi, 
+                        manometer_2018.cabang, 
+                        manometer_2018.koneksi_pipa, 
+                        manometer_2018.latlng,
+                        manometer_2018.org_code,
+                        manometer_2018.nipam";
     protected $joinUser = "tekanan_manometer.username = user.username";
+    protected $defaultOrder = 'manometer_2018.cabang ASC,
+                                manometer_2018.penanggung_jawab ASC,
+                                manometer_2018.nama_manometer ASC';
     protected $rows = null;
     protected $page = null;
     protected $pos = null;
@@ -31,13 +33,11 @@ class MasterTekanan_model extends CI_Model
         $this->pos = ($this->page - 1) * $this->rows;
         $this->sort = isset($body->sort) ? $body->sort : null;
         $this->order = isset($body->order) ? $body->order : null;
-        $kd_mano = isset($body->kd_mano) ? $body->kd_mano : null;
+        $cari = isset($body->cari) ? $body->cari : null;
         $lokasi_mano = isset($body->lokasi_mano) ? $body->lokasi_mano : null;
         $username = isset($body->username) ? $body->username : null;
 
-        if ($kd_mano != null) return $this->listMano($kd_mano);
-        if ($lokasi_mano != null) return $this->listLokasi($lokasi_mano);
-        if ($username != null) return $this->listPetugas($username);
+        if ($cari != null) return $this->listMano($cari);
         return $this->listDefault();
     }
 
@@ -45,89 +45,45 @@ class MasterTekanan_model extends CI_Model
     {
         $result = (object)[];
         if ($this->sort) $this->db->order_by($this->sort, $this->order);
+        else $this->db->order_by($this->defaultOrder);
         $result->rows = $this->db
             ->select($this->select)
-            ->from('tekanan_manometer')
-            ->join('user', $this->joinUser)
-            ->order_by('tekanan_manometer.tgl_input', 'DESC')
+            ->from($this->table)
             ->limit($this->rows, $this->pos)
             ->get()
             ->result();
         $result->total = $this->db
-            ->select('COUNT(tekanan_manometer.id) as total')
-            ->from('tekanan_manometer')
-            ->join('user', $this->joinUser)
+            ->select('COUNT(manometer_2018.ID) as total')
+            ->from($this->table)
             ->get()
             ->result()[0]->total;
         return $result;
     }
 
-    function listMano($kd_mano)
+    function listMano($cari)
     {
         $result = (object)[];
         if ($this->sort) $this->db->order_by($this->sort, $this->order);
+        else $this->db->order_by($this->defaultOrder);
         $result->rows = $this->db
             ->select($this->select)
-            ->from('tekanan_manometer')
-            ->where('kd_mano', $kd_mano)
-            ->join('user', $this->joinUser)
-            ->order_by('tekanan_manometer.tgl_input', 'DESC')
+            ->from($this->table)
+            ->where('id_manometer', $cari)
+            ->or_like('nama_manometer', $cari)
+            ->or_like('cabang', $cari)
+            ->or_like('penanggung_jawab', $cari)
+            ->or_like('lokasi', $cari)
             ->limit($this->rows, $this->pos)
             ->get()
             ->result();
         $result->total = $this->db
-            ->select('COUNT(tekanan_manometer.id) as total')
-            ->from('tekanan_manometer')
-            ->where('kd_mano', $kd_mano)
-            ->join('user', $this->joinUser)
-            ->get()
-            ->result()[0]->total;
-        return $result;
-    }
-
-    function listLokasi($lokasi_mano)
-    {
-        $result = (object)[];
-        if ($this->sort) $this->db->order_by($this->sort, $this->order);
-        $result->rows = $this->db
-            ->select($this->select)
-            ->from('tekanan_manometer')
-            ->like('lokasi_mano', $lokasi_mano)
-            ->join('user', $this->joinUser)
-            ->order_by('tekanan_manometer.tgl_input', 'DESC')
-            ->limit($this->rows, $this->pos)
-            ->get()
-            ->result();
-        $result->total = $this->db
-            ->select('COUNT(tekanan_manometer.id) as total')
-            ->from('tekanan_manometer')
-            ->like('lokasi_mano', $lokasi_mano)
-            ->join('user', $this->joinUser)
-            ->get()
-            ->result()[0]->total;
-        return $result;
-    }
-
-    function listPetugas($username)
-    {
-        $result = (object)[];
-        if ($this->sort) $this->db->order_by($this->sort, $this->order);
-        $result->rows = $this->db
-            ->select($this->select)
-            ->from('tekanan_manometer')
-            ->where('tekanan_manometer.username', $username)
-            ->or_like('user.nama', $username)
-            ->join('user', $this->joinUser)
-            ->order_by('tekanan_manometer.tgl_input', 'DESC')
-            ->limit($this->rows, $this->pos)
-            ->get()
-            ->result();
-        $result->total = $this->db
-            ->select('COUNT(tekanan_manometer.id) as total')
-            ->from('tekanan_manometer')
-            ->where('tekanan_manometer.username', $username)
-            ->or_like('user.nama', $username)
-            ->join('user', $this->joinUser)
+            ->select('COUNT(manometer_2018.ID) as total')
+            ->from($this->table)
+            ->where('id_manometer', $cari)
+            ->or_like('nama_manometer', $cari)
+            ->or_like('cabang', $cari)
+            ->or_like('penanggung_jawab', $cari)
+            ->or_like('lokasi', $cari)
             ->get()
             ->result()[0]->total;
         return $result;
@@ -137,9 +93,8 @@ class MasterTekanan_model extends CI_Model
     {
         $result = $this->db
             ->select($this->select)
-            ->from('tekanan_manometer')
-            ->where('tekanan_manometer.id', $id)
-            ->join('user', $this->joinUser)
+            ->from($this->table)
+            ->where($this->table . '.ID', $id)
             ->get()
             ->row();
         return $result;
@@ -149,13 +104,19 @@ class MasterTekanan_model extends CI_Model
     {
         $body = (object) $this->input->post();
         $data = [
-            "tgl_input" => $body->tgl_input,
-            "lokasi_mano" => $body->lokasi_mano,
-            "tekanan" => $body->tekanan,
+            "id_" => $body->id_,
+            "id_manometer" => $body->id_manometer,
+            "nama_manometer" => $body->nama_manometer,
+            "penanggung_jawab" => $body->penanggung_jawab,
+            "lokasi" => $body->lokasi,
+            "cabang" => $body->cabang,
+            "koneksi_pipa" => $body->koneksi_pipa,
+            "latlng" => $body->latlng
         ];
-        if ($id != $body->id) return ["code" => 304, "message" => "Gagal Mengupdate Data!, Sepertinya ada yang salah!"];
+        // print_r($where);
+        if ($id != $body->ID) return ["code" => 304, "message" => "Gagal Mengupdate Data!, Sepertinya ada yang salah!"];
         $this->db->trans_start();
-        $this->db->set($data)->where('id', $id)->update('tekanan_manometer');
+        $this->db->set($data)->where('id', $id)->update('manometer_2018');
         $this->db->trans_complete();
 
         if ($this->db->trans_status() === false) return ["code" => 304, "message" => 'Gagal Mengupdate Data!, Sepertinya ada yang salah!'];
