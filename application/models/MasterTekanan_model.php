@@ -12,9 +12,7 @@ class MasterTekanan_model extends CI_Model
                         manometer_2018.lokasi, 
                         manometer_2018.cabang, 
                         manometer_2018.koneksi_pipa, 
-                        manometer_2018.latlng,
-                        manometer_2018.org_code,
-                        manometer_2018.nipam";
+                        manometer_2018.latlng";
     protected $joinUser = "tekanan_manometer.username = user.username";
     protected $defaultOrder = 'manometer_2018.cabang ASC,
                                 manometer_2018.penanggung_jawab ASC,
@@ -37,7 +35,7 @@ class MasterTekanan_model extends CI_Model
         $lokasi_mano = isset($body->lokasi_mano) ? $body->lokasi_mano : null;
         $username = isset($body->username) ? $body->username : null;
 
-        if ($cari != null) return $this->listMano($cari);
+        if ($cari != null) return $this->listCari($cari);
         return $this->listDefault();
     }
 
@@ -60,32 +58,83 @@ class MasterTekanan_model extends CI_Model
         return $result;
     }
 
-    function listMano($cari)
+    function listCari($cari)
     {
         $result = (object)[];
+        $id_manometer = $this->result_generator('where', 'id_manometer', $cari);
+        $total_id_manometer = $this->result_total('where', 'id_manometer', $cari);
+        $nama_manometer = $this->result_generator('like', 'nama_manometer', $cari);
+        $total_nama_manometer = $this->result_total('like', 'nama_manometer', $cari);
+        $cabang = $this->result_generator('like', 'cabang', $cari);
+        $total_cabang = $this->result_total('like', 'cabang', $cari);
+        $penanggung_jawab = $this->result_generator('like', 'penanggung_jawab', $cari);
+        $total_penanggung_jawab = $this->result_total('like', 'penanggung_jawab', $cari);
+        $lokasi = $this->result_generator('like', 'lokasi', $cari);
+        $total_lokasi = $this->result_total('like', 'lokasi', $cari);
+        if ($id_manometer) {
+            $result->rows = $id_manometer;
+            $result->total = $total_id_manometer;
+        }
+        if ($nama_manometer) {
+            $result->rows = $nama_manometer;
+            $result->total = $total_nama_manometer;
+        }
+        if ($cabang) {
+            $result->rows = $cabang;
+            $result->total = $total_cabang;
+        }
+        if ($penanggung_jawab) {
+            $result->rows = $penanggung_jawab;
+            $result->total = $total_penanggung_jawab;
+        }
+        if ($lokasi) {
+            $result->rows = $lokasi;
+            $result->total = $total_lokasi;
+        }
+        return $result;
+    }
+
+    function result_generator($method, $field, $value)
+    {
         if ($this->sort) $this->db->order_by($this->sort, $this->order);
-        else $this->db->order_by($this->defaultOrder);
-        $result->rows = $this->db
-            ->select($this->select)
-            ->from($this->table)
-            ->where('id_manometer', $cari)
-            ->or_like('nama_manometer', $cari)
-            ->or_like('cabang', $cari)
-            ->or_like('penanggung_jawab', $cari)
-            ->or_like('lokasi', $cari)
-            ->limit($this->rows, $this->pos)
+        if ($method == "where") $this->db->where($field, $value);
+        else $this->db->like($field, $value);
+        $this->db
+            ->select(
+                "manometer_2018.ID, 
+                manometer_2018.id_, 
+                manometer_2018.id_manometer, 
+                manometer_2018.nama_manometer, 
+                manometer_2018.penanggung_jawab, 
+                manometer_2018.lokasi, 
+                manometer_2018.cabang, 
+                manometer_2018.koneksi_pipa, 
+                manometer_2018.latlng"
+            )
+            ->from("manometer_2018")
+            ->order_by(
+                'manometer_2018.cabang ASC,
+                manometer_2018.penanggung_jawab ASC,
+                manometer_2018.nama_manometer ASC'
+            )
+            ->limit($this->rows, $this->pos);
+        $result = $this->db
             ->get()
             ->result();
-        $result->total = $this->db
-            ->select('COUNT(manometer_2018.ID) as total')
-            ->from($this->table)
-            ->where('id_manometer', $cari)
-            ->or_like('nama_manometer', $cari)
-            ->or_like('cabang', $cari)
-            ->or_like('penanggung_jawab', $cari)
-            ->or_like('lokasi', $cari)
+        return $result;
+    }
+
+    function result_total($method, $field, $value)
+    {
+        if ($method == "where") $this->db->where($field, $value);
+        else $this->db->like($field, $value);
+        $this->db
+            ->select('count(manometer_2018.ID) as total')
+            ->from("manometer_2018");
+        $result = $this->db
             ->get()
-            ->result()[0]->total;
+            ->result()[0]
+            ->total;
         return $result;
     }
 

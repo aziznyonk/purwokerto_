@@ -106,26 +106,3 @@ let myparser = (s) => {
         return new Date();
     }
 }
-
-$.getJSON(`${baseUri}/Cabang`, json => {
-    json.map((r) => {
-        const str = `<option value='${r.org_code}'>${r.org_name}</option>`
-        $('#cabang').append(str)
-    })
-})
-
-// $('#cabang').on('change', (e) => {
-//     const org_code = $('#cabang').val()
-//     $('#nipam').find('.listNipam').remove().end()
-//     $.getJSON(`${baseUri}/Pegawai/cari/${org_code}`, json => {
-//         json.map((r) => {
-//             const str = `<option value='${r.nipam}' class='listNipam' data-nama='${r.nama}'>${r.nipam} - ${r.nama}</option>`
-//             $('#nipam').append(str)
-//         })
-//     })
-// })
-
-// $('#nipam').on('change', () => {
-//     const pj = $('#nipam').find(":selected").text()
-//     $('#penanggung_jawab').val(pj)
-// })

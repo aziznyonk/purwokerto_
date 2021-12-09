@@ -26,6 +26,11 @@ class Tekanan_model extends CI_Model
 	protected $cari = null;
 	protected $tgl = null;
 
+	function __construct()
+	{
+		parent::__construct();
+	}
+
 	function tekananListing()
 	{
 		$body = (object) $this->input->post();
@@ -39,24 +44,6 @@ class Tekanan_model extends CI_Model
 
 		if (isset($body->cari)) return $this->cari($body->cari);
 		return $this->cariDefault();
-	}
-
-	function resultGenerator($r)
-	{
-		$result = (object)[];
-		$result->total = $r->total;
-		$result->rows = [];
-		foreach ($r->rows as $d) {
-			$koordinat = json_decode($d->latlng)[0]->geometry;
-			$d->koordinat = '<a href="#" onClick="openModal(' . $koordinat[0] . ',' . $koordinat[1] . ',' . $d->tekanan . ')" data-toggle="modal" data-target="#myModal">' . $koordinat[0] . ',' . $koordinat[1] . '</a>';
-			// $d->foto = '<img class="zoom" src="' . $d->path . '" style="width:50px;height:50px;">';
-			// $a_edit = '<a href="' . base_url() . 'pipa/edit_pipa/' . $d->ID . '" class="btn btn-small"><i class="icon fa fa-pencil" title="edit"></i></a>';
-			$a_edit = '<a href="#" onClick="edit(' . $d->ID . ')" data-toggle="modal" data-target="#editModal"><i class="icon fa fa-pencil" title="edit"></i></a>';
-			$a_delete = '<a onclick="hapus(' . $d->ID . ')" class="btn btn-small text-danger"><i class="icon fa fa-trash" title="delete"></i></a>';
-			$d->action = $a_edit . $a_delete;
-			array_push($result->rows, $d);
-		}
-		return $r;
 	}
 
 	function tekananDetail($ID)
@@ -173,7 +160,6 @@ class Tekanan_model extends CI_Model
 			->limit($this->rows, $this->pos)
 			->get()
 			->result();
-		$result = (object) [];
 		$result->rows = $r;
 		if ($this->tgl != null) $this->db->where('DATE(manometer.tgl_baca_s)', $this->tgl);
 		$this->db->select('count(manometer.ID) as total')->from('manometer');
@@ -184,34 +170,79 @@ class Tekanan_model extends CI_Model
 	function cari($cari)
 	{
 		$result = (object)[];
-		if ($this->tgl != null) $this->db->where('DATE(manometer.tgl_baca_s)', $this->tgl);
+		$username = $this->result_generator('where', 'manometer.username', $cari);
+		$total_username = $this->result_total('where', 'manometer.username', $cari);
+		$nama = $this->result_generator('like', 'v_pegawai.nama', $cari);
+		$total_nama = $this->result_total('like', 'v_pegawai.nama', $cari);
+		$id_manometer = $this->result_generator('where', 'manometer.id_manometer', $cari);
+		$total_id_manometer = $this->result_total('where', 'manometer.id_manometer', $cari);
+		$nama_manometer = $this->result_generator('like', 'manometer.nama_manometer', $cari);
+		$total_nama_manometer = $this->result_total('like', 'manometer.nama_manometer', $cari);
+		$lokasi = $this->result_generator('like', 'manometer.lokasi', $cari);
+		$total_lokasi = $this->result_total('like', 'manometer.lokasi', $cari);
+		if ($username) {
+			$result->rows = $username;
+			$result->total = $total_username;
+		}
+		if ($nama) {
+			$result->rows = $nama;
+			$result->total = $total_nama;
+		}
+		if ($id_manometer) {
+			$result->rows = $id_manometer;
+			$result->total = $total_id_manometer;
+		}
+		if ($nama_manometer) {
+			$result->rows = $nama_manometer;
+			$result->total = $total_nama_manometer;
+		}
+		if ($lokasi) {
+			$result->rows = $lokasi;
+			$result->total = $total_lokasi;
+		}
+		return $result;
+	}
+
+	function result_generator($method, $field, $value)
+	{
 		if ($this->sort) $this->db->order_by($this->sort, $this->order);
-		$r = $this->db
-			->select($this->select)
-			->from($this->table)
-			->join($this->join, $this->joinVpegawai, 'INNER')
-			->where('manometer.id_manometer', $cari)
-			->or_where('manometer.username', $cari)
-			->or_like('v_pegawai.nama', $cari)
-			->or_like('manometer.nama_manometer', $cari)
-			->or_like('manometer.lokasi', $cari)
-			->limit($this->rows, $this->pos)
-			->get()
-			->result();
-		// echo $this->db->last_query();
-		$result = (object) [];
-		$result->rows = $r;
-		if ($this->tgl != null) $this->db->where('DATE(manometer.tgl_baca_s)', $this->tgl);
+		if ($this->tgl) $this->db->where('DATE(manometer.tgl_baca_s)', $this->tgl);
+		if ($method == "where") $this->db->where($field, $value);
+		else $this->db->like($field, $value);
+		$this->db
+			->select(
+				"manometer.ID as ID, 
+				manometer.id_manometer as id_manometer, 
+				manometer.nama_manometer as nama_manometer, 
+				manometer.lokasi as lokasi, 
+				manometer.latlng as latlng, 
+				manometer.username as username, 
+				manometer.kondisi as kondisi, 
+				manometer.tekanan as tekanan, 
+				manometer.keterangan as keterangan, 
+				manometer.tgl_baca_s as tgl_baca_s, 
+				v_pegawai.nama as nama"
+			)
+			->from("manometer")
+			->join('v_pegawai', 'manometer.username = v_pegawai.nipam')
+			->limit($this->rows, $this->pos);
+		$result = $this->db->get()->result();
+		return $result;
+	}
+
+	function result_total($method, $field, $value)
+	{
+		if ($this->tgl) $this->db->where('DATE(manometer.tgl_baca_s)', $this->tgl);
+		if ($method == "where") $this->db->where($field, $value);
+		else $this->db->like($field, $value);
 		$this->db
 			->select('count(manometer.ID) as total')
-			->from($this->table)
-			->join($this->join, $this->joinVpegawai, 'INNER')
-			->where('manometer.id_manometer', $cari)
-			->or_where('manometer.username', $cari)
-			->or_like('v_pegawai.nama', $cari)
-			->or_like('manometer.nama_manometer', $cari)
-			->or_like('manometer.lokasi', $cari);
-		$result->total = $this->db->get()->result()[0]->total;
+			->from("manometer")
+			->join($this->join, $this->joinVpegawai, 'INNER');
+		$result = $this->db
+			->get()
+			->result()[0]
+			->total;
 		return $result;
 	}
 }
