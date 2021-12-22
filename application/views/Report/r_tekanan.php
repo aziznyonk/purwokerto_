@@ -72,10 +72,10 @@ if (in_array($bln, [4, 6, 9, 11])) $i = 30;
                     <th rowspan="4">No</th>
                     <th rowspan="4">Manometer</th>
                     <th rowspan="4">Lokasi</th>
-
                 </tr>
                 <tr>
                     <th colspan="<?= $i ?>">Waktu Pengukuran Manometer</th>
+                    <th rowspan="4">Rata<sup>2</sup> Tekanan Per- Wilayah</th>
                 </tr>
                 <tr>
                     <th colspan="<?= $i ?>">Bulan : {bulan} {tahun}</th>
@@ -87,13 +87,18 @@ if (in_array($bln, [4, 6, 9, 11])) $i = 30;
                 </tr>
             </thead>
             <tbody>
-                <?php $n = 1; ?>
-                <?php foreach ($manometer as $m) : ?>
+                <?php
+                $n = 1;
+                $totRata = 0;
+                foreach ($manometer as $m) :
+                    $comTekanan = 0;
+                    $pembagi = 0;
+                ?>
                     <tr>
                         <td><?= $n ?></td>
                         <td nowrap><?= $m->nama_manometer ?></td>
                         <td nowrap><?= $m->lokasi ?></td>
-                        <?php for ($x = 0; $x < $i; $x++) {
+                        <?php for ($x = 0; $x < $i; $x++) :
                             $tgl = $x + 1;
                             $id_manometer = $m->id_manometer;
                             $find = array_values(array_filter($data, function ($v) use ($tgl, $id_manometer) {
@@ -101,14 +106,27 @@ if (in_array($bln, [4, 6, 9, 11])) $i = 30;
                                 if ($v->tgl == $tgl && $v->id_manometer == $id_manometer) $result = $v;
                                 return $result;
                             }));
-                            $tekanan = (count($find) > 0) ? $find[0]->tekanan : "";
+                            $tekanan = (count($find) > 0) ? $find[0]->tekanan :  null;
+                            $pembagi = (count($find) > 0) ? $pembagi + 1 : $pembagi + 0;
+                            $comTekanan = $comTekanan + (float) $tekanan;
                         ?>
                             <td><?= $tekanan ?></td>
-                        <?php } ?>
+                        <?php
+                        endfor;
+                        $rata2 = round(($comTekanan / $pembagi), 2);
+                        $totRata = round(($totRata + $rata2), 2);
+                        ?>
+                        <td align="center"><?= $rata2 ?></td>
                     </tr>
                     <?php $n++ ?>
                 <?php endforeach ?>
             </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="<?= 3 + $x ?>">Total Rata - Rata Tekanan</th>
+                    <th><?= round(($totRata / ($n - 1)), 2) ?></th>
+                </tr>
+            </tfoot>
         </table>
 
     </div>

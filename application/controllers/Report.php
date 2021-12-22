@@ -11,11 +11,21 @@ class Report extends BaseController
         $this->load->helper('bulan_helper');
     }
 
-    public function Tekanan($username, $tahun, $bulan)
+    public function Tekanan($username = null, $tahun = null, $bulan = null)
     {
-        $data = $this->Tekanan_model->report($username, $tahun, $bulan);
-        $data->tahun = $tahun;
-        $data->bulan = getBulan($bulan);
-        $this->load->view('Report/r_tekanan', $data);
+        if ($username == null or $tahun == null or $bulan == null) {
+            echo "Something Wrong Broo!!!";
+            return;
+        }
+        $this->load->library('parser');
+        $result = (object)[];
+        $data = $this->Tekanan_model->Report($username, $tahun, $bulan);
+        $result->nama = $data->user->nama;
+        $result->cabang = $data->user->org_name;
+        $result->manometer = $data->manometer;
+        $result->data = $data->data;
+        $result->tahun = $tahun;
+        $result->bulan = getBulan($bulan);
+        $this->parser->parse('Report/r_tekanan', (array)$result);
     }
 }

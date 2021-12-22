@@ -245,4 +245,75 @@ class Tekanan_model extends CI_Model
 			->total;
 		return $result;
 	}
+
+	public function Report($username, $tahun, $bulan)
+	{
+		$result = (object)[];
+		$result->user = $this->findUserReport($username);
+		$result->manometer = $this->findListManoReport($username, $tahun, $bulan);
+		$result->data = $this->findManoReport($username, $tahun, $bulan);
+		return $result;
+	}
+
+	function findUserReport($username)
+	{
+		return $this->db
+			->select(
+				"v_bagian.nipam, 
+			v_bagian.nama, 
+			v_bagian.org_name"
+			)
+			->from("v_bagian")
+			->where('nipam', $username)
+			->get()
+			->row();
+	}
+
+	function findListManoReport($username, $tahun, $bulan)
+	{
+		$where = [
+			'manometer.username' => $username,
+			'YEAR(manometer.tgl_baca_s)' => $tahun,
+			'MONTH(manometer.tgl_baca_s)' => $bulan
+		];
+		$order = "manometer.tgl_baca_s ASC, manometer.nama_manometer ASC";
+
+		return $this->db
+			->select(
+				"manometer.id_manometer, 
+				manometer.nama_manometer,
+				manometer.lokasi"
+			)
+			->from('manometer')
+			->where($where)
+			->group_by("manometer.id_manometer")
+			->order_by($order)
+			->get()
+			->result();
+	}
+
+	function findManoReport($username, $tahun, $bulan)
+	{
+		$where = [
+			'manometer.username' => $username,
+			'YEAR(manometer.tgl_baca_s)' => $tahun,
+			'MONTH(manometer.tgl_baca_s)' => $bulan
+		];
+		$order = "manometer.tgl_baca_s ASC, manometer.nama_manometer ASC";
+
+		return $this->db
+			->select(
+				"manometer.id_manometer, 
+				manometer.nama_manometer, 
+				manometer.lokasi, 
+				manometer.tgl_baca_s,
+				DAY(manometer.tgl_baca_s) as tgl,
+				manometer.tekanan"
+			)
+			->from('manometer')
+			->where($where)
+			->order_by($order)
+			->get()
+			->result();
+	}
 }
