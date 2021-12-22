@@ -1,48 +1,50 @@
 <style>
-    .container {
-        max-width: 100vw;
-        padding-left: 2vw;
-        padding-right: 2vw;
-    }
-
-    .title {
-        display: grid;
-        justify-content: center;
-        text-align: center;
-        width: 100%;
-    }
-
-    .title>h2 {
+    h2 {
         margin: auto;
         width: 100vw;
         padding-bottom: 5px;
     }
 
-    .biodata {
-        margin-bottom: 1em;
-    }
-
-    .content {
-        max-width: 100vw;
-        margin-bottom: 1em;
-        /* overflow-x: auto; */
-    }
-
-    .bordered {
-        border: 1px solid black;
-    }
-
-    .bordered td,
-    th {
-        border: 1px solid black;
-        min-width: 25px;
-        padding: 5px;
+    .biru {
+        background-color: #010189 !important;
+        color: white !important;
     }
 
     table {
         border-collapse: collapse;
-        width: 100%;
-        text-transform: uppercase;
+    }
+
+    table td {
+        min-width: 30px;
+        white-space: nowrap;
+    }
+
+    .text-right {
+        text-align: right;
+    }
+
+    @media print {
+        body * {
+            visibility: hidden;
+            -webkit-print-color-adjust: exact !important;
+        }
+
+        #section-to-print,
+        #section-to-print * {
+            visibility: visible;
+        }
+
+        #section-to-print {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+
+    @page {
+        size: A4;
+        margin-left: 5mm;
+        margin-top: 5mm;
     }
 </style>
 
@@ -51,83 +53,101 @@ $bln = 9;
 if ($bln == 2) $i = 29;
 if (in_array($bln, [1, 3, 5, 7, 8, 10, 12])) $i = 31;
 if (in_array($bln, [4, 6, 9, 11])) $i = 30;
+function formatKoma($val)
+{
+    $x = explode('.', $val);
+}
 ?>
 
-<div class="container">
-    <div class="title">
-        <h2>PERUMDA AIR MINUM TIRTA SATRIA</h2>
-        <h2>CABANG {cabang}</h2>
-        <h2>PEMANTAUAN TEKANAN, JAM LAYANAN, & KUALITAS AIR</h2>
-        <h2>Bulan {bulan} {tahun}</h2>
-    </div>
-    <hr>
-    <div class="biodata">
-        <h3>PENANGGUNG JAWAB JARINGAN : {nama} </h3>
-    </div>
+<div id="section-to-print">
+    <table>
+        <thead>
+            <tr>
+                <td align="center" colspan="<?= $i + 4 ?>">
+                    <h2>PERUMDA AIR MINUM TIRTA SATRIA</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="<?= $i + 4 ?>">
+                    <h2>CABANG {cabang}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="<?= $i + 4 ?>">
+                    <h2>PEMANTAUAN TEKANAN, JAM LAYANAN, & KUALITAS AIR</h2>
+                </td>
+            </tr>
+            <tr>
+                <td align="center" colspan="<?= $i + 4 ?>">
+                    <h2>Bulan {bulan} {tahun}</h2>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="10">
+                    <h3>PENANGGUNG JAWAB JARINGAN : {nama} </h3>
+                </td>
+            </tr>
+        </thead>
 
-    <div class="content">
-        <table border="1" class="bordered">
-            <thead style="background-color: #010189; color:white;">
+    </table>
+    <table border="1">
+        <thead class="biru">
+            <tr>
+                <th rowspan="3">No</th>
+                <th rowspan="3">Manometer</th>
+                <th rowspan="3">Lokasi</th>
+                <th colspan="<?= $i ?>">Waktu Pengukuran Manometer</th>
+                <th rowspan="3">Rata<sup>2</sup> Tekanan Per- Wilayah</th>
+            </tr>
+            <tr>
+                <th colspan="<?= $i ?>">Bulan : {bulan} {tahun}</th>
+            </tr>
+            <tr>
+                <?php for ($x = 0; $x < $i; $x++) : ?>
+                    <th><?= $x + 1 ?></th>
+                <?php endfor; ?>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $n = 1;
+            $totRata = 0;
+            foreach ($manometer as $m) :
+                $comTekanan = 0;
+                $pembagi = 0;
+            ?>
                 <tr>
-                    <th rowspan="4">No</th>
-                    <th rowspan="4">Manometer</th>
-                    <th rowspan="4">Lokasi</th>
+                    <td><?= $n ?></td>
+                    <td nowrap><?= $m->nama_manometer ?></td>
+                    <td nowrap><?= $m->lokasi ?></td>
+                    <?php for ($x = 0; $x < $i; $x++) :
+                        $tgl = $x + 1;
+                        $id_manometer = $m->id_manometer;
+                        $find = array_values(array_filter($data, function ($v) use ($tgl, $id_manometer) {
+                            $result = null;
+                            if ($v->tgl == $tgl && $v->id_manometer == $id_manometer) $result = $v;
+                            return $result;
+                        }));
+                        $tekanan = (count($find) > 0) ? $find[0]->tekanan :  null;
+                        $pembagi = (count($find) > 0) ? $pembagi + 1 : $pembagi + 0;
+                        $comTekanan = $comTekanan + (float) $tekanan;
+                    ?>
+                        <td align="right"><?= $tekanan ?></td>
+                    <?php
+                    endfor;
+                    $rata2 = round(($comTekanan / $pembagi), 2);
+                    $totRata = round(($totRata + $rata2), 2);
+                    ?>
+                    <td class="text-right"><?= floatval($rata2) ?></td>
                 </tr>
-                <tr>
-                    <th colspan="<?= $i ?>">Waktu Pengukuran Manometer</th>
-                    <th rowspan="4">Rata<sup>2</sup> Tekanan Per- Wilayah</th>
-                </tr>
-                <tr>
-                    <th colspan="<?= $i ?>">Bulan : {bulan} {tahun}</th>
-                </tr>
-                <tr>
-                    <?php for ($x = 0; $x < $i; $x++) : ?>
-                        <th><?= $x + 1 ?></th>
-                    <?php endfor; ?>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                $n = 1;
-                $totRata = 0;
-                foreach ($manometer as $m) :
-                    $comTekanan = 0;
-                    $pembagi = 0;
-                ?>
-                    <tr>
-                        <td><?= $n ?></td>
-                        <td nowrap><?= $m->nama_manometer ?></td>
-                        <td nowrap><?= $m->lokasi ?></td>
-                        <?php for ($x = 0; $x < $i; $x++) :
-                            $tgl = $x + 1;
-                            $id_manometer = $m->id_manometer;
-                            $find = array_values(array_filter($data, function ($v) use ($tgl, $id_manometer) {
-                                $result = null;
-                                if ($v->tgl == $tgl && $v->id_manometer == $id_manometer) $result = $v;
-                                return $result;
-                            }));
-                            $tekanan = (count($find) > 0) ? $find[0]->tekanan :  null;
-                            $pembagi = (count($find) > 0) ? $pembagi + 1 : $pembagi + 0;
-                            $comTekanan = $comTekanan + (float) $tekanan;
-                        ?>
-                            <td><?= $tekanan ?></td>
-                        <?php
-                        endfor;
-                        $rata2 = round(($comTekanan / $pembagi), 2);
-                        $totRata = round(($totRata + $rata2), 2);
-                        ?>
-                        <td align="center"><?= $rata2 ?></td>
-                    </tr>
-                    <?php $n++ ?>
-                <?php endforeach ?>
-            </tbody>
-            <tfoot>
-                <tr>
-                    <th colspan="<?= 3 + $x ?>">Total Rata - Rata Tekanan</th>
-                    <th><?= round(($totRata / ($n - 1)), 2) ?></th>
-                </tr>
-            </tfoot>
-        </table>
-
-    </div>
+                <?php $n++ ?>
+            <?php endforeach ?>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th colspan="<?= 3 + $x ?>">Total Rata - Rata Tekanan</th>
+                <th class="text-right"><?= round(($totRata / ($n - 1)), 2) ?></th>
+            </tr>
+        </tfoot>
+    </table>
 </div>

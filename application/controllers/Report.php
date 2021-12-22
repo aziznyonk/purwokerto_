@@ -13,6 +13,10 @@ class Report extends BaseController
 
     public function Tekanan($username = null, $tahun = null, $bulan = null)
     {
+        $file = "export.xls";
+        header("Content-type: application/vnd.ms-excel");
+        header("Content-Disposition: attachment; filename=$file");
+
         if ($username == null or $tahun == null or $bulan == null) {
             echo "Something Wrong Broo!!!";
             return;

@@ -17,23 +17,17 @@ class Manometer extends BaseController
 		if ($this->isAdmin() == TRUE) {
 			$this->loadThis();
 		} else {
+			$data = (object)[];
 			$this->global['title'] = 'Manometer';
 			$this->global['cusScript'] = '<script src="' . base_url() . 'assets/custom/js/tekanan.js"></script>';
 			$this->global['mapScript'] = '<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhp3-zMM6Z1-NM8FBefecBjnRQBIv08_8&v=weekly" async></script>';
-			$this->loadViews('manometer/tekanan', $this->global, null);
+			$data->petugas = $this->tekanan_model->getListPetugas();
+			$this->loadViews('manometer/tekanan', $this->global, $data);
 		}
 	}
-
+	
 	public function getDataTekanan()
 	{
-		// $page = isset($_POST['page']) ? intval($_POST['page']) : 1;
-		// $rows = isset($_POST['rows']) ? intval($_POST['rows']) : 20;
-		// $sort = isset($_POST['sort']) ? ['sort' => $_POST['sort'], 'order' => $_POST['order']] : null;
-		// $offset = ($page - 1) * $rows;
-		// $tgl = (isset($_POST['tgl']) && $_POST['tgl'] != '') ? date('Y-m-d', strtotime($_POST['tgl'])) : null;
-		// $idMano = isset($_POST['idMano']) ? $_POST['idMano'] : null;
-		// $petugas = isset($_POST['petugas']) ? $_POST['petugas'] : null;
-
 		$this->global['title'] = 'Tekanan';
 		$result = $this->tekanan_model->tekananListing();
 		echo json_encode($result);

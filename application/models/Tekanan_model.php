@@ -316,4 +316,16 @@ class Tekanan_model extends CI_Model
 			->get()
 			->result();
 	}
+
+	public function getListPetugas()
+	{
+		return $this->db
+			->select("manometer.username, v_pegawai.nama")
+			->from("manometer")
+			->join("v_pegawai", "manometer.username = v_pegawai.nipam")
+			->group_by("manometer.username")
+			->order_by("v_pegawai.nama")
+			->get()
+			->result();
+	}
 }

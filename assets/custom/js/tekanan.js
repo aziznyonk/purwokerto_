@@ -214,6 +214,23 @@ let doSearch = e => {
     $('.easyui-searchbox').textbox('reset')
 }
 
+let doSearchUsername = e => {
+    if (e === "ALL") return doSearch()
+    let req
+    const tgl = $('#tgl').val()
+    if (tgl) req = { tgl: $('#tgl').val(), cari: e }
+    else req = { cari: e }
+    dg.datagrid('load', req)
+    $('.easyui-searchbox').textbox('reset')
+}
+
+let exportExcel = () => {
+    const tgl = $('#tgl').val().split('-')
+    const username = $('#username').val()
+    if (tgl === "" || username === "ALL") return alert('Pilih Tanggal dan Petugas Lebih Dahulu!')
+    window.location.href = `${baseUri}/Report/Tekanan/${username}/${tgl[0]}/${tgl[1]}`
+}
+
 $.fn.datebox.defaults.formatter = function (date) {
     var y = date.getFullYear();
     var m = date.getMonth() + 1;
