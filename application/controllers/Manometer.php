@@ -25,11 +25,15 @@ class Manometer extends BaseController
 			$this->loadViews('manometer/tekanan', $this->global, $data);
 		}
 	}
-	
+
 	public function getDataTekanan()
 	{
 		$this->global['title'] = 'Tekanan';
 		$result = $this->tekanan_model->tekananListing();
+		if (count((array)$result) == 0) {
+			echo json_encode(["rows" => [], "total" => 0]);
+			return;
+		}
 		echo json_encode($result);
 	}
 

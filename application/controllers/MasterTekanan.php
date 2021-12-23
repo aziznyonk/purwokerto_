@@ -25,6 +25,10 @@ class MasterTekanan extends BaseController
     public function ListTekanan()
     {
         $res = $this->MasterTekanan_model->listTekanan();
+        if (count((array)$res) == 0) {
+            echo json_encode(["rows" => [], "total" => 0]);
+            return;
+        }
         echo json_encode($res);
     }
 
