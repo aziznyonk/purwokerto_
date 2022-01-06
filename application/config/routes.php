@@ -54,7 +54,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | Web Service Routes
 | -------------------------------------------------------------------------
 */
-$route['default_controller']        = 'login';
+$route['default_controller']        = 'map';
 $route['404_override']              = 'error_404';
 $route['translate_uri_dashes']      = TRUE;
 
@@ -163,3 +163,5 @@ $route['api/searchMeterinduk']          = 'API/searchMeterinduk';
 $route['api/insertDebitMeterinduk']     = 'API/insertDebitMeterinduk';
 $route['api/insertDebitTekanan']        = 'API/insertDebitTekanan';
 $route['api/insertManometer']           = 'API/insertManometer';
+
+$route['api/getDataTekanan']            = 'ManometerAPI/getDataTekanan';

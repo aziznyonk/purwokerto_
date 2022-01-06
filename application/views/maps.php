@@ -22,7 +22,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <body class="hold-transition skin-blue sidebar-mini">
     <div class="wrapper">
         <header class="main-header">
-            <a href="<?php echo base_url(); ?>index.php/dashboard" class="logo" style="height: auto">
+            <a href="<?php echo base_url(); ?>" class="logo" style="height: auto">
                 <!--                    <img src="--><?php //echo base_url(); 
                                                         ?>
                 <!--assets/images/logo_pdam.png" alt="homepage" style="width: 35px;"/>-->
@@ -35,7 +35,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <div class="navbar-custom-menu pull-left">
                     <ul class="nav navbar-nav">
                         <li><a href="#"><b>HOME</b></a></li>
-                        <li><a href="http://103.25.210.61:81/purwokerto/"><b>ADMIN</b></a></li>
+                        <li><a href="<?= base_url('login') ?>"><b>ADMIN</b></a></li>
                     </ul>
                 </div>
             </nav>
@@ -65,6 +65,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         <li>
                             <a href="<?php echo base_url(); ?>index.php/mapTekanan">
                                 <i class="fa fa-id-card"></i><span>WEB MAP TEKANAN PIPA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?php echo base_url(); ?>UserManometer">
+                                <i class="fa fa-id-card"></i><span>Laporan Tekanan Manometer</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" id="mapMaker">
+                                <i class="fa fa-id-card"></i><span>Map Maker</span>
                             </a>
                         </li>
                         <li class="treeview">
@@ -265,12 +275,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </span>
                             </a>
                             <ul class="pipaLegenda">
-                                <li><a href="#">
+                                <li>
+                                    <a href="#">
                                         <hr class="pipa dm_12"> Pipa 12,5 mm
-                                    </a></li>
-                                <li><a href="#">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
                                         <hr class="pipa dm_20"> Pipa 20 mm
-                                    </a></li>
+                                    </a>
+                                </li>
                                 <li><a href="#">
                                         <hr class="pipa dm_25"> Pipa 25 mm
                                     </a></li>
@@ -344,6 +358,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <script rel="script" type="text/javascript">
         $(function() {
             'use strict';
+            $('#mapMaker').on('click', () => window.open(`http://${window.location.hostname}:3000`))
             $('#cbx_tekanan').click(function() {
                 if ($(this).is(':checked')) {
                     $("#loadTekanan").show();

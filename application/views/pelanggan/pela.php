@@ -21,7 +21,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
             <div class="box-body" style="overflow-y:auto">
                 <!-- <table id="mbrTable" class="table table-bordered table-striped"> -->
-                <table id="tt" class="easyui-datagrid" title="Pelanggan Reguler" data-options="rownumbers:true,pagination:true,singleSelect:true,url:'<?php base_url(); ?>/purwokerto_/pela/getDataPel',method:'post',toolbar:'#tb',footer:'#ft'">
+                <table id="tt" class="easyui-datagrid" title="Pelanggan Reguler" data-options="rownumbers:true,pagination:true,singleSelect:true,url:'<?php base_url(); ?>/pela/getDataPel',method:'post',toolbar:'#tb',footer:'#ft'">
                     <thead>
                         <tr>
                             <th field="nomor_pela">Nomor Pelanggan</th>

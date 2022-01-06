@@ -8,7 +8,7 @@ const tgl = $('#tgl')
 
 dg.datagrid({
     title: 'Data Manometer',
-    url: `${baseUri}/tekanan/getDataTekanan`,
+    url: `${baseUri}/api/getDataTekanan`,
     columns: [[
         // { field: 'ID', title: 'ID', sortable: true },
         { field: 'id_manometer', title: 'ID Manometer', sortable: true },
