@@ -21,8 +21,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
             <div class="box-body" style="overflow-y:auto">
                 <!-- <table id="mbrTable" class="table table-bordered table-striped"> -->
-                <table id="tt" class="easyui-datagrid" title="Pelanggan Reguler" data-options="rownumbers:true,pagination:true,singleSelect:true,url:'<?php base_url(); ?>/pela/getDataPel',method:'post',toolbar:'#tb',footer:'#ft'">
-                    <thead>
+                <table id="tt" class="easyui-datagrid" title="Pelanggan Reguler">
+                    <!-- data-options="rownumbers:true,pagination:true,singleSelect:true,url:'<?php base_url(); ?>pela/getDataPel',method:'post',toolbar:'#tb',footer:'#ft'"> -->
+                    <!-- <thead>
                         <tr>
                             <th field="nomor_pela">Nomor Pelanggan</th>
                             <th field="nama">Nama</th>
@@ -39,7 +40,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <th field="action">Action</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody></tbody> -->
                 </table>
                 <form method="post" action="#" id="tb" style="padding:2px 5px;">
                     Cari :
@@ -65,7 +66,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <form action="#" id="frmEdit" onsubmit="return false">
                     <div class="form-group">
                         <label for="textinput">Nomor Pelanggan</label>
-                        <input id="nomor_pela" name="nomor_pela" type="text" value="" class="form-control input-md">
+                        <input id="nomor_pela" name="nomor_pela" type="text" value="" class="form-control input-md" readonly>
                     </div>
                     <div class="form-group">
                         <label for="textinput">Nama Pelanggan</label>
@@ -106,83 +107,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
 </div>
 
-<script defer type="text/javascript">
-    let doSearchMano = e => doSearch({
-        'nopel': e
-    })
-    let doSearchNama = e => doSearch({
-        'nama': e
-    })
-    let doSearchAlamat = e => doSearch({
-        'alamat': e
-    })
-    let doSearchSurv = e => doSearch({
-        'surv': e
-    })
-    let doSearch = (req) => {
-        $('#tt').datagrid('load', req)
-        $('.easyui-searchbox').textbox('reset')
-    }
-
-    let resetTable = () => {
-        $('#tt').datagrid('load', {
-            page: 1,
-            rows: 10
-        })
-        $('.easyui-searchbox').textbox('reset')
-    }
-
-    function deleteFunction(ID) {
-        if (confirm("Apakah anda yakin untuk menghapus data ini ?!")) {
-            $.ajax({
-                url: "<?php base_url(); ?>delete_pelanggan",
-                data: {
-                    ID: ID
-                },
-                type: "POST",
-                success: function(res) {
-                    if (res == false) {
-                        alert('Failed - Data Gagal Dihapus ' + res);
-                    } else {
-                        alert('Sukses Data Berhasil Dihapus');
-                        $('#tt').datagrid('reload');
-                    }
-                },
-                error: function(error) {
-                    alert('sukses ' + error);
-                }
-            });
-        } else {
-            alert('Tidak Jadi menhapus data pelanggan ' + ID);
-        }
-    }
-
-    let editData = async (data) => {
-        $.post('<?= base_url() ?>pela/getDataPelId', {
-            'id': data
-        }, (json) => {
-            $.each(json, (i, d) => {
-                $('#ID').val(d.ID)
-                $('#nomor_pela').val(d.nomor_pela)
-                $('#nama').val(d.nama)
-                $('#alamat').val(d.alamat)
-                $('#klasifikasi').val(d.klasifikasi)
-                $('#cabang').val(d.cabang)
-                $('#status').val(d.status).trigger('change')
-                $('#latlng').val(d.latlng)
-            })
-        }, "json")
-    }
-
-    $('#frmEdit').on('submit', e => {
-        const formData = $('#frmEdit').serializeArray()
-        $.post(`<?= base_url() ?>pela/save_pelanggan`, formData, json => {
-            $('#frmEdit')[0].reset()
-            const result = JSON.parse(json)
-            alert(result.message)
-            $('.close').trigger('click')
-            $('#tt').datagrid('reload');
-        })
-        return false
-    })
-</script>
+<script defer src="<?= base_url('assets/custom/js/pelanggan.js'); ?>"></script>

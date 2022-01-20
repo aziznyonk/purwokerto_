@@ -14,7 +14,7 @@ class Kml_model extends CI_Model
 	function mbrListing()
     {
         $this->db->select('*');
-        $this->db->from('sr_mbr');
+        $this->db->from('sr_mbr')->limit(100);
         //$this->db->limit('25');
         $query = $this->db->get();
         $result = $query->result_array();

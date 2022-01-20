@@ -2,6 +2,12 @@
 
 class Mbr_model extends CI_Model
 {
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->model('CustModel');
+	}
+
 	/*MBR Model*/
 	function mbrListing($rows, $offset, $penginput, $nama, $alamat, $surv)
 	{
@@ -11,14 +17,7 @@ class Mbr_model extends CI_Model
 		elseif ($alamat != null) $r = $this->mbrAlamat($offset, $rows, $alamat);
 		elseif ($surv != null) $r = $this->mbrSurv($offset, $rows, $surv);
 		else $r = $this->mbrDefault($offset, $rows);
-		$result->rows = [];
-		foreach ($r['data'] as $d) {
-			$d->action = '<a href="#" data-toggle="modal" data-target="#editModal" onclick=editData(' . $d->ID . ') class="btn btn-small"><i class="icon fa fa-pencil" title="edit"></i></a>'
-				. '<a onclick="deleteFunction(' . $d->ID . ')" class="btn btn-small text-danger"><i class="icon fa fa-trash" title="delete"></i></a>';
-			array_push($result->rows, $d);
-		}
-		$result->total = $r['tot'];
-		return $result;
+		return $r;
 	}
 
 	function mbrListing_edit($id)
@@ -27,7 +26,6 @@ class Mbr_model extends CI_Model
 		$this->db->from('sr_mbr');
 		$this->db->where('ID', $id);
 		$query = $this->db->get();
-
 		$result = $query->result();
 
 		return $result;
@@ -97,60 +95,60 @@ class Mbr_model extends CI_Model
 
 	function mbrDefault($offset, $rows)
 	{
-		$data['data'] = $this->db
+		$data['rows'] = $this->db
 			->from('sr_mbr')
 			->limit($offset, $rows)
 			->get()
 			->result();
-		$data['tot'] = $this->db->count_all('sr_mbr');
+		$data['total'] = $this->db->count_all('sr_mbr');
 		return $data;
 	}
 
 	function mbrPenginput($offset, $rows, $penginput)
 	{
-		$data['data'] = $this->db
+		$data['rows'] = $this->db
 			->from('sr_mbr')
 			->where('username', $penginput)
 			->limit($offset, $rows)
 			->get()
 			->result();
-		$data['tot'] = $this->db->select('COUNT(ID) AS total')->where('username', $penginput)->get('sr_mbr')->result()[0]->total;
+		$data['total'] = $this->db->select('COUNT(ID) AS total')->where('username', $penginput)->get('sr_mbr')->result()[0]->total;
 		return $data;
 	}
 
 	function mbrNama($offset, $rows, $nama)
 	{
-		$data['data'] = $this->db
+		$data['rows'] = $this->db
 			->from('sr_mbr')
 			->like('nama', $nama)
 			->limit($offset, $rows)
 			->get()
 			->result();
-		$data['tot'] = $this->db->select('COUNT(ID) AS total')->like('nama', $nama)->get('sr_mbr')->result()[0]->total;
+		$data['total'] = $this->db->select('COUNT(ID) AS total')->like('nama', $nama)->get('sr_mbr')->result()[0]->total;
 		return $data;
 	}
 
 	function mbrAlamat($offset, $rows, $alamat)
 	{
-		$data['data'] = $this->db
+		$data['rows'] = $this->db
 			->from('sr_mbr')
 			->like('alamat', $alamat)
 			->limit($offset, $rows)
 			->get()
 			->result();
-		$data['tot'] = $this->db->select('COUNT(ID) AS total')->like('alamat', $alamat)->get('sr_mbr')->result()[0]->total;
+		$data['total'] = $this->db->select('COUNT(ID) AS total')->like('alamat', $alamat)->get('sr_mbr')->result()[0]->total;
 		return $data;
 	}
 
 	function mbrSurv($offset, $rows, $surv)
 	{
-		$data['data'] = $this->db
+		$data['rows'] = $this->db
 			->from('sr_mbr')
 			->where('ID_', $surv)
 			->limit($offset, $rows)
 			->get()
 			->result();
-		$data['tot'] = $this->db->select('COUNT(ID) AS total')->where('ID_', $surv)->get('sr_mbr')->result()[0]->total;
+		$data['total'] = $this->db->select('COUNT(ID) AS total')->where('ID_', $surv)->get('sr_mbr')->result()[0]->total;
 		return $data;
 	}
 }

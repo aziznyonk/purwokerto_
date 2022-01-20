@@ -47,8 +47,7 @@ class Login extends CI_Controller {
 
             }else {
                 $this->session->set_flashdata('error', 'Email or Password mismatch');
-                echo "Salah result : "+$result;
-
+                redirect('/login');
             }
         }
     }

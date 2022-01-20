@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 								<div class="form-group">
 									<label class="col-md-4 control-label" for="textinput">Nomor Pelanggan</label>
 									<div class="col-md-4">
-										<input id="textinput" name="nomor_pela" type="text" value="<?php echo $record->nomor_pela ?>" class="form-control input-md">
+										<input id="textinput" name="nomor_pela" type="text" value="<?php echo $record->nomor_pela ?>" class="form-control input-md" readonly>
 										<span class="help-block">Nomor Pelanggan</span>
 									</div>
 								</div>

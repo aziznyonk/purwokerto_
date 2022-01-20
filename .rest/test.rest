@@ -1,0 +1,4 @@
+post http://localhost/purwokerto_/api/getDataTekanan
+Content-Type: application/x-www-form-urlencoded; charset=UTF-8
+
+page=1&rows=10

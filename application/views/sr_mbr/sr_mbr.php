@@ -3,10 +3,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <div class="content-wrapper">
     <section class="content-header">
-        <!-- <div class="input-group">
-            <a href="<?php echo base_url(); ?>index.php/Sr_mbrAdd"><button class="btn btn-default"><i class="fa fa-plus"></i> Add New MBR</button></a>
+        <div class="input-group">
+            <!-- <a href="<?php echo base_url(); ?>index.php/Sr_mbrAdd"><button class="btn btn-default"><i class="fa fa-plus"></i> Add New MBR</button></a> -->
             <a href="<?php echo base_url(); ?>index.php/exportKml_mbr" target="blank" download="Marker_PelangganMBR.geojson" style="margin-left:10px"><button class="btn btn-info"><i class="fa fa-save"></i> Save Pelanggan MBR</button></a>
-        </div> -->
+        </div>
         <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">MBR</li>
@@ -18,30 +18,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <h3 class="box-title">Table MBR Data</h3>
             </div>
             <div class="box-body" style="overflow-y:auto">
-                <table id="tt" class="easyui-datagrid" title="Data Pelanggan MBR" data-options="rownumbers:true,pagination:true,singleSelect:true,url:'<?php base_url(); ?>mbr/getDataPelMbr',method:'post',toolbar:'#tb',footer:'#ft'">
-                    <thead>
-                        <tr>
-                            <th field="ID_">ID Survey</th>
-                            <th field="nama">Nama</th>
-                            <th field="alamat">Alamat</th>
-                            <th field="almt_dipasang">Alamat Dipasang</th>
-                            <th field="telfon">Telfon</th>
-                            <th field="ktp">KTP</th>
-                            <th field="rt_biasa">Type</th>
-                            <th field="daya_listrik">Daya</th>
-                            <th field="pekerjaan">Pekerjaan</th>
-                            <th field="jml_penghuni">Penghuni</th>
-                            <th field="smber_skrg">Sumber</th>
-                            <th field="jarak">Jarak</th>
-                            <th field="lebar_jln">Lebar Jalan</th>
-                            <th field="jaringan_distri">Distribusi</th>
-                            <th field="username">Penginput</th>
-                            <th field="date">Tgl Input</th>
-                            <th field="action" class="text-center">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+                <table id="tt" class="easyui-datagrid" title="Data Pelanggan MBR" ></table>
                 <form method="post" action="#" id="tb" style="padding:2px 5px;">
                     Cari :
                     <input type="text" class="easyui-searchbox" data-options="prompt:'ID Survey',searcher:doSearchSurv">
@@ -108,10 +85,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <div class="form-group">
                         <label for="selectbasic">Daya Listrik</label>
                         <select id="daya_listrik" name="daya_listrik" class="form-control">
-                            <option value="0 Watt"> 0 Watt</option>
-                            <option value="450 Watt">450 Watt</option>
-                            <option value="900 Watt">900 Watt</option>
-                            <option value=">900 Watt">>900 Watt</option>
+                            <option value="0 watt"> 0 watt</option>
+                            <option value="450 watt">450 watt</option>
+                            <option value="900 watt">900 watt</option>
+                            <option value=">900 watt">>900 watt</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -154,98 +131,4 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
 </div>
 
-<script type="text/javascript">
-    let doSearchPenginput = e => doSearch({
-        'penginput': e
-    })
-
-    let doSearchNama = e => doSearch({
-        'nama': e
-    })
-
-    let doSearchAlamat = e => doSearch({
-        'alamat': e
-    })
-
-    let doSearchSurv = e => doSearch({
-        'surv': e
-    })
-
-    let doSearch = (req) => {
-        // console.log(req)
-        $('#tt').datagrid('load', req)
-        $('.easyui-searchbox').textbox('reset')
-    }
-
-    let resetTable = () => {
-        $('#tt').datagrid('load', {
-            page: 1,
-            rows: 10
-        })
-        $('.easyui-searchbox').textbox('reset')
-    }
-
-    function deleteFunction(ID) {
-        if (confirm("Apakah anda yakin untuk menghapus data ini ?!")) {
-            $.ajax({
-                url: "<?php base_url(); ?>delete_mbr",
-                data: {
-                    ID: ID
-                },
-                type: "POST",
-                success: function(res) {
-                    if (res == false) {
-                        alert('Failed - Data Gagal Dihapus ' + res);
-                    } else {
-                        alert('Sukses Data Berhasil Dihapus');
-                        resetTable()
-                    }
-                },
-                error: function(error) {
-                    alert('sukses ' + error);
-                }
-            });
-        } else {
-            alert('Tidak Jadi menhapus data pelanggan MBR ' + ID);
-        }
-    }
-
-    let editData = async (data) => {
-        $.post('<?= base_url() ?>mbr/getDataPelId', {
-            'id': data
-        }, (json) => {
-            $.each(json, (i, d) => {
-                $('#ID').val(d.ID)
-                $('#nama').val(d.nama)
-                $('#alamat').val(d.alamat)
-                $('#almt_dipasang').val(d.almt_dipasang)
-                $('#ktp').val(d.ktp)
-                $('#telfon').val(d.telfon)
-                $('#daya_listrik').val(d.daya_listrik)
-                $('#rt_biasa').val(d.rt_biasa)
-                $('#pekerjaan').val(d.pekerjaan)
-                $('#jml_penghuni').val(d.jml_penghuni)
-                $('#smber_skrg').val(d.smber_skrg)
-                $('#jarak').val(d.jarak)
-                $('#lebar_jln').val(d.lebar_jln)
-                $('#jaringan_distri').val(d.jaringan_distri)
-                $('#latlng').val(d.latlng)
-                $('#username').val(d.username)
-                $('#ID_').val(d.ID_)
-
-            })
-        }, "json")
-    }
-
-    $('#frmEdit').on('submit', e => {
-        const formData = $('#frmEdit').serializeArray()
-        $.post(`<?= base_url() ?>mbr/update_pelanggan`, formData, json => {
-            $('#frmEdit')[0].reset()
-            const result = JSON.parse(json)
-            alert(result.message)
-            $('.close').trigger('click')
-            $('#tt').datagrid('reload');
-        })
-        return false
-    })
-</script>
+<script defer src="<?= base_url('assets/custom/js/sr_mbr.js'); ?>"></script>
